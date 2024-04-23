@@ -12,6 +12,7 @@ public class TUI {
         System.out.println("4. Sortir");
     }
     public short menu(){
+        System.out.println("Esculli una opció");
         novaPartida();
         carregarPartida();
         configuracio();

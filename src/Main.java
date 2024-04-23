@@ -7,8 +7,10 @@ public class Main {
         sc.useLocale(Locale.ENGLISH);
 
         int opcioEscollida = sc.nextInt();
-
     }
-
-
+    TUI tui = new TUI();
+    public TUI getTui() {
+        tui.menu();
+        return tui;
+    }
 }
