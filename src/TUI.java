@@ -11,12 +11,12 @@ public class TUI {
     private static void sortir() {
         System.out.println("4. Sortir");
     }
-    public short menu(){
-        System.out.println("Esculli una opció");
+    public static void menu(){
+        System.out.println("Esculli una opció:");
         novaPartida();
         carregarPartida();
         configuracio();
         sortir();
-        return menu();
+
     }
 }
