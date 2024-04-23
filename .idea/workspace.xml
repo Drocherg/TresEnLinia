@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Añadido metodos de cada opcion y del menu">
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Clase TUI creada">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,12 +30,12 @@
     &quot;assignee&quot;: &quot;Drocherg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Drocherg/TresEnLinia.git",
-    "accountId": "9564c07f-af07-4ccd-b470-fcef7d49f218"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Drocherg/TresEnLinia.git&quot;,
+    &quot;accountId&quot;: &quot;9564c07f-af07-4ccd-b470-fcef7d49f218&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -85,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713885144390</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Clase TUI creada">
+      <option name="closed" value="true" />
+      <created>1713885446853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713885446853</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Repositorio migrado a uno nuevo y arreglado la mayoria de errores" />
     <MESSAGE value="Añadido metodos de cada opcion y del menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido metodos de cada opcion y del menu" />
+    <MESSAGE value="Clase TUI creada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clase TUI creada" />
   </component>
 </project>
