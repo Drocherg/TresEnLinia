@@ -25,6 +25,7 @@ public class Main {
             opcioEscollida = sc.nextInt();
 
             //Se escribe del 1 al 4 la opcion deseada
+
             if (opcioEscollida == 1) {
                 System.out.println("Has seleccionat la opció 1: Nova partida.");
                 //Se vuelve a mostrar el menú
