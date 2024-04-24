@@ -2,27 +2,16 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class TUI {
-    private static void novaPartida(){
-        System.out.println("1. Nova partida");
-    }
-    private static void carregarPartida(){
-        System.out.println("2. Carregar partida");
-    }
-    private static void configuracio(){
-        System.out.println("3. Configuració");
-    }
-    private static void sortir() {
-        System.out.println("4. Sortir");
-    }
+
     public static void menu(){
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
 
         System.out.println("Esculli una opció:");
-        novaPartida();
-        carregarPartida();
-        configuracio();
-        sortir();
+        Main.novaPartida();
+        Main.carregarPartida();
+        Main.configuracio();
+        Main.sortir();
 
         int opcioEscollida = sc.nextInt();
         while (opcioEscollida <= 4) {
@@ -45,9 +34,10 @@ public class TUI {
 
             } else if (opcioEscollida == 4) {
                 System.out.println("Sortint...");
-                break;
+                return;
             }
             //Sale del menu
         }
+
     }
 }
