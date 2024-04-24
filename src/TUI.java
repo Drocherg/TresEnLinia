@@ -1,11 +1,10 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class TUI {
+    Scanner sc = new Scanner(System.in);
 
     public static void menu() {
-        Scanner sc = new Scanner(System.in);
-        sc.useLocale(Locale.ENGLISH);
+
 
         System.out.println("Esculli una opció:");
         Main.novaPartida();
@@ -13,11 +12,10 @@ public class TUI {
         Main.configuracio();
         Main.sortir();
 
-        int opcioEscollida = sc.nextInt();
-        //while (opcioEscollida <= 4) {
+        /*while (opcioEscollida <= 4) {
             //Sale del bucle cuando se escribe 4, si no vuleve a mostrar el menu
             //Se escribe del 1 al 4 la opcion deseada
-            /*if (opcioEscollida == 1) {
+            if (opcioEscollida == 1) {
                 System.out.println("Has seleccionat la opció 1: Nova partida.");
                 menu();
                 //Nueva partida;
@@ -37,21 +35,21 @@ public class TUI {
                 return;
             }
             //Sale del menu
+        }
         }*/
-            switch (opcioEscollida) {
-                case 1:
-                    System.out.println("Has seleccionat la opció 1: Nova partida.");
-                    menu();
-                case 2:
-                    System.out.println("Has seleccionat la opció 2: Carregar partida.");
-                    menu();
-                case 3:
-                    System.out.println("Has seleccionat la opció 3: Configuració.");
-                    menu();
-                case 4:
-                    System.out.println("Sortint...");
-                    break;
-            }
-        //}
+        switch (opcioEscollida) {
+            case 1:
+                System.out.println("Has seleccionat l'opció 1: Nova partida.");
+                menu();
+            case 2:
+                System.out.println("Has seleccionat l'opció 2: Carregar partida.");
+                menu();
+            case 3:
+                System.out.println("Has seleccionat l'opció 3: Configuració.");
+                menu();
+            case 4:
+                System.out.println("Sortint...");
+                break;
+        }
     }
 }
