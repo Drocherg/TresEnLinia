@@ -1,22 +1,19 @@
-import java.util.Locale;
-import java.util.Scanner;
+import jdk.jshell.spi.ExecutionControl;
 
 public class Main {
     public static void main(String[] args) {
-        TUI tui = new TUI();
-        tui.menu();
 
     }
-    static void novaPartida(){
-        System.out.println("1. Nova partida");
+    private static void novaPartida(){
+        throw new ExecutionControl.NotImplementedException();
+
     }
-    static void carregarPartida(){
-        System.out.println("2. Carregar partida");
+    private static void carregarPartida(){
+        throw new ExecutionControl.NotImplementedException();
     }
-    static void configuracio(){
-        System.out.println("3. Configuració");
+    private static void configuracio(){
+        throw new ExecutionControl.NotImplementedException();
     }
-    static void sortir() {
-        System.out.println("4. Sortir");
+    private void sortir() {
     }
 }

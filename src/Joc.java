@@ -16,9 +16,7 @@ public class Joc {
         return getnovaPartida();
     }
 
-    novaPartida() {
-
-    }
+    Main.novaPartida();
 
     public static void jugar(){
         short fila;
