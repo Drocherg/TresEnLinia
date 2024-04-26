@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Optimicacion">
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="He puesto los metodos en main y tui">
+      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713982056598</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="He puesto los metodos en main y tui">
+      <option name="closed" value="true" />
+      <created>1714145607243</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714145607243</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +186,7 @@
     <MESSAGE value="Metodos puestos en el metodo menu" />
     <MESSAGE value="He cambiado el if por el switch y he comentado el while" />
     <MESSAGE value="Optimicacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimicacion" />
+    <MESSAGE value="He puesto los metodos en main y tui" />
+    <option name="LAST_COMMIT_MESSAGE" value="He puesto los metodos en main y tui" />
   </component>
 </project>

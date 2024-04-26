@@ -1,5 +1,8 @@
 
 public class Main {
+    TUI tui = new TUI();
+    Joc joc = new Joc();
+
     public static void main(String[] args) {
 
     }
@@ -15,4 +18,5 @@ public class Main {
     private static String sortir() {
         return sortir();
     }
+
 }
