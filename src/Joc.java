@@ -1,6 +1,4 @@
 public class Joc {
-    TUI tui = new TUI();
-    Main main = new Main();
     private char taulell;
     private short torn;
 
@@ -12,11 +10,8 @@ public class Joc {
         return taulell;
     }
 
-    public novaPartida getnovaPartida() {
-        return getnovaPartida();
+    public static void novaPartida() {
     }
-
-    Main.novaPartida();
 
     public static void jugar(){
         short fila;
