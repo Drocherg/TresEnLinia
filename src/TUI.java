@@ -4,11 +4,12 @@ public class TUI {
     private static Scanner sc = new Scanner(System.in);
 
     public static Integer mostrarMenu() {
+        System.out.println("Escull una opció");
+        System.out.println();
         System.out.println("1. Nova partida");
         System.out.println("2. Carregar partida");
         System.out.println("3. Configuració");
         System.out.println("4. Sortir");
-
 
         return sc.nextInt();
 
