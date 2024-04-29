@@ -9,7 +9,8 @@ public class TUI {
         System.out.println("3. Configuració");
         System.out.println("4. Sortir");
 
-        return sc.nextInt();
+        int opcioEscollida;
+        return opcioEscollida = sc.nextInt();
 
     }
     public static void mostrarTaulell(char taulell, short torn){

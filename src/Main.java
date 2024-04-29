@@ -5,9 +5,9 @@ public class Main {
 
     public static void main(String[] args) {
         TUI.mostrarMenu();
-        novaPartida();
 
     }
+
     private static String novaPartida(){
         return Joc.novaPartida();
     }
