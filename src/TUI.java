@@ -8,6 +8,7 @@ public class TUI {
         System.out.println("2. Carregar partida");
         System.out.println("3. Configuració");
         System.out.println("4. Sortir");
+
     }
     public static void mostrarTaulell(char taulell, short torn){
         char taulell1 = taulell;

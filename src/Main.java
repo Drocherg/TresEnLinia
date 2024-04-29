@@ -4,10 +4,11 @@ public class Main {
     Joc joc = new Joc();
 
     public static void main(String[] args) {
+novaPartida();
 
     }
     private static String novaPartida(){
-        return novaPartida();
+        return Joc.novaPartida();
     }
     private static String carregarPartida(){
         return carregarPartida();

@@ -1,7 +1,6 @@
 public class Joc {
     private char taulell;
     private short torn;
-
     public short getTorn() {
         return torn;
     }
@@ -10,17 +9,32 @@ public class Joc {
         return taulell;
     }
 
-    public static void novaPartida() {
+    public static String novaPartida() {
+        String[][] array = {
+                {"|"," ","|"," ","|"," ","|"},
+                {"|"," ","|"," ","|"," ","|"},
+                {"|"," ","|"," ","|"," ","|"}};
+        for (String[] strings : array) {
+            for (String string : strings) {
+                System.out.print(string);
+            }
+            System.out.println();
+        }
+        return;
     }
 
     public static void jugar(){
         short fila;
         short columna;
-        return;
+
+        return ;
     }
-    public boolean jugadaGuanyadora(){
+    public boolean jugadaGuanyadora() {
         short fila;
         short columna;
         return jugadaGuanyadora();
     }
+    //| | | |
+    //| | | |
+    //| | | |
 }
