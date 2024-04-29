@@ -20,7 +20,7 @@ public class Joc {
             }
             System.out.println();
         }
-        return;
+        return "Hola";
     }
 
     public static void jugar(){

@@ -4,7 +4,8 @@ public class Main {
     Joc joc = new Joc();
 
     public static void main(String[] args) {
-novaPartida();
+        TUI.mostrarMenu();
+        novaPartida();
 
     }
     private static String novaPartida(){
