@@ -6,9 +6,12 @@ public class Main {
     public static void main(String[] args) {
         TUI.mostrarMenu();
 
+        if (TUI.mostrarMenu() == 1){
+            novaPartida();
+        }
     }
-
     private static String novaPartida(){
+        System.out.println("Has escollit Nova Partida");
         return Joc.novaPartida();
     }
     private static String carregarPartida(){
