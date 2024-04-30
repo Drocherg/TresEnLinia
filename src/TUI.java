@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class TUI {
     private static Scanner sc = new Scanner(System.in);
-    int opcioEscollida;
-    public static Integer mostrarMenu() {
+    public static int mostrarMenu() {
         System.out.println("Escull una opció");
         System.out.println();
         System.out.println("1. Nova partida");
@@ -11,6 +10,7 @@ public class TUI {
         System.out.println("3. Configuració");
         System.out.println("4. Sortir");
         int opcioEscollida = sc.nextInt();
+        sc.nextLine();
         return opcioEscollida;
 
     }

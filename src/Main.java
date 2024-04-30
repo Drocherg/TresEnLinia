@@ -4,37 +4,40 @@ public class Main {
     Joc joc = new Joc();
 
     public static void main(String[] args) {
+        Main main = new Main();
 
-
-        if (TUI.mostrarMenu() == 1){
-            novaPartida();
-        } else if (TUI.mostrarMenu() == 2) {
-            carregarPartida();
-        } else if (TUI.mostrarMenu() == 3) {
-            configuracio();
-        } else if (TUI.mostrarMenu() == 4) {
-            sortir();
+        int opcioEscollida = TUI.mostrarMenu();
+        switch (opcioEscollida) {
+            case 1:
+                main.novaPartida();
+                break;
+            case 2:
+                main.carregarPartida();
+                break;
+            case 3:
+                main.configuracio();
+                break;
+            case 4:
+                main.sortir();
+                break;
         }
+
     }
-    private static String novaPartida(){
+    private void novaPartida() {
         System.out.println("Has escollit Nova Partida");
         System.out.println();
-        return Joc.novaPartida();
+        Joc.novaPartida();
     }
-    private static String carregarPartida(){
+    private void carregarPartida() {
         System.out.println("Has escollit carrega partida");
         System.out.println();
-        return "Hola";
     }
-    private static String configuracio(){
+    private void configuracio() {
         System.out.println("Has escollit configuracio");
         System.out.println();
-        return "Hola";
     }
-    private static String sortir() {
+    private void sortir() {
         System.out.println("Has escollit sortir");
         System.out.println();
-        return "Hola";
     }
-
 }
