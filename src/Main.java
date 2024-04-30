@@ -33,7 +33,7 @@ public class Main {
         System.out.println();
     }
     private void configuracio() {
-        System.out.println("Has escollit configuracio");
+        System.out.println("Has escollit configuració");
         System.out.println();
     }
     private void sortir() {

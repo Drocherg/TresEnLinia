@@ -1,11 +1,11 @@
 public class Joc {
-    private char taulell;
-    private short torn;
-    public short getTorn() {
+    private static char taulell;
+    private static short torn;
+    public static short getTorn() {
         return torn;
     }
 
-    public char getTaulell() {
+    public static char getTaulell() {
         return taulell;
     }
 

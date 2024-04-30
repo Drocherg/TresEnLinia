@@ -11,6 +11,7 @@ public class Test {
         assertEquals(' ', joc.getTaulell()[0][1]); // Comprobamos la segunda casilla (y así sucesivamente)
         assertEquals(1, joc.getTorn()); // Verificamos que sea el turno del jugador 1
     }
+}
     /*public void testJugar() {
         Joc joc = new Joc();
 
@@ -21,5 +22,6 @@ public class Test {
         // Verifica que el turno del jugador haya cambiado después de jugar
 
     }*/
-}
+
+
 
