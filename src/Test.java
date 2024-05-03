@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Test;
+/*import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class Test {
     public void testNovaPartida() {
@@ -21,5 +21,4 @@ public class Test {
         // Verifica que el turno del jugador haya cambiado después de jugar
 
     }*/
-}
 
