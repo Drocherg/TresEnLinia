@@ -10,11 +10,11 @@ public class Joc {
     }
 
     public static String novaPartida() {
-        String[][] array = {
+        String[][] matrix = {
                 {"|"," ","|"," ","|"," ","|"},
                 {"|"," ","|"," ","|"," ","|"},
                 {"|"," ","|"," ","|"," ","|"}};
-        for (String[] strings : array) {
+        for (String[] strings : matrix) {
             for (String string : strings) {
                 System.out.print(string);
             }
@@ -44,8 +44,18 @@ public class Joc {
         }
     }
     public static boolean jugadaGuanyadora() {
-        short fila;
-        short columna;
+        novaPartida().string;
+        
+        short fila = 0;
+        short columna = 0;
+
+        for (;fila < 6; fila++)		// El primer índice recorre las filas
+            for (;columna < 2; columna++){ // El segundo índice recorre las columnas
+                int anterior2 = novaPartida()[fila - 2][columna];
+                int anterior = novaPartida()[fila - 1][columna];
+                int actual = novaPartida()[fila][columna];
+
+            }
         return jugadaGuanyadora();
     }
 
