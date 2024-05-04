@@ -44,13 +44,36 @@ public class Joc {
         }
     }
     public static boolean jugadaGuanyadora() {
+        novaPartida();
         short fila;
         short columna;
-        return jugadaGuanyadora();
+        for (int fila = 0; fila < 3; fila++) {
+            if (novaPartida()[fila][1] != ' ' && novaPartida()[fila][1] == novaPartida()[fila][3] && novaPartida()[fila][3] == novaPartida()[fila][5]) {
+                return true; // Tres en raya en la fila i
+            }
+        }
+        // Verificar columnas
+        for (int columna = 0; columna < 3; columna++) {
+            if (novaPartida()[0][columna] != ' ' && novaPartida()[0][columna] == novaPartida()[1][columna] && novaPartida()[1][columna] == novaPartida()[2][columna]) {
+                return true; // Tres en raya en la columna tal
+            }
+        }
+        // Verificar diagonal principal
+        if (novaPartida()[0][1] != ' ' && novaPartida()[0][1] == novaPartida()[1][3] && novaPartida()[1][3] == novaPartida()[2][5]) {
+            return true; // Tres en raya en la diagonal principal
+        }
+
+        // Verificar diagonal secundaria
+        if (novaPartida()[1][3] != ' ' && novaPartida()[0][5] == novaPartida()[1][3] && novaPartida()[1][3] == novaPartida()[2][1]) {
+            return true; // Tres en raya en la diagonal secundaria
+        }
+        return false; // No se encontró un tres en raya
     }
+        }
+        return jugadaGuanyadora();
 
 
     //| | | |
     //| | | |
     //| | | |
-}
+
