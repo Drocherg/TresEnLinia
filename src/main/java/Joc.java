@@ -10,11 +10,11 @@ public class Joc {
     }
 
     public static String novaPartida() {
-        String[][] matrix = {
+        String[][] array = {
                 {"|"," ","|"," ","|"," ","|"},
                 {"|"," ","|"," ","|"," ","|"},
                 {"|"," ","|"," ","|"," ","|"}};
-        for (String[] strings : matrix) {
+        for (String[] strings : array) {
             for (String string : strings) {
                 System.out.print(string);
             }
@@ -44,23 +44,36 @@ public class Joc {
         }
     }
     public static boolean jugadaGuanyadora() {
-        novaPartida().string;
-        
+        novaPartida();
         short fila = 0;
         short columna = 0;
-
-        for (;fila < 6; fila++)		// El primer índice recorre las filas
-            for (;columna < 2; columna++){ // El segundo índice recorre las columnas
-                int anterior2 = novaPartida()[fila - 2][columna];
-                int anterior = novaPartida()[fila - 1][columna];
-                int actual = novaPartida()[fila][columna];
-
+        for (; fila < 3; fila++) {
+            if (novaPartida()[fila][1] != ' ' && novaPartida()[fila][1] == novaPartida()[fila][3] && novaPartida()[fila][3] == novaPartida()[fila][5]) {
+                return true; // Tres en raya en la fila i
             }
-        return jugadaGuanyadora();
+        }
+        // Verificar columnas
+        for (;columna < 3; columna++) {
+            if (novaPartida()[0][columna] != ' ' && novaPartida()[0][columna] == novaPartida()[1][columna] && novaPartida()[1][columna] == novaPartida()[2][columna]) {
+                return true; // Tres en raya en la columna tal
+            }
+        }
+        // Verificar diagonal principal
+        if (novaPartida()[0][1] != ' ' && novaPartida()[0][1] == novaPartida()[1][3] && novaPartida()[1][3] == novaPartida()[2][5]) {
+            return true; // Tres en raya en la diagonal principal
+        }
+
+        // Verificar diagonal secundaria
+        if (novaPartida()[1][3] != ' ' && novaPartida()[0][5] == novaPartida()[1][3] && novaPartida()[1][3] == novaPartida()[2][1]) {
+            return true; // Tres en raya en la diagonal secundaria
+        }
+        return false; // No se encontró un tres en raya
     }
+        }
+        return jugadaGuanyadora();
 
 
     //| | | |
     //| | | |
     //| | | |
-}
+
