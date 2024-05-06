@@ -8,7 +8,16 @@ public class Joc {
     public char[][] getTaulell() {
         return taulell;
     }
-
+    public Joc() {
+        this.taulell = new char[3][7]; // Inicializar el tablero con el tamaño adecuado
+        // Inicializar el tablero con espacios en blanco (indicando celdas vacías)
+        for (int fila = 0; fila < 3; fila++) {
+            for (int columna = 0; columna < 7; columna++) {
+                taulell[fila][columna] = ' ';
+            }
+        }
+        this.torn = 0; // Inicializar el contador de turnos a 0
+    }
     public static String novaPartida() {
         String[][] array = {
                 {"|"," ","|"," ","|"," ","|"},
@@ -34,9 +43,11 @@ public class Joc {
             // Incrementar el contador de turnos
             torn++;
 
-            if (jugadaGuanyadora()) {
+            if (jugadaGuanyadora() == true) {
                 // Si hay un ganador, mostrar un mensaje y terminar el juego
                 System.out.println("¡El jugador " + jugadorActual + " ha guanyat!");
+            }else {
+                return;
             }
         } else {
             // Si la casilla seleccionada no está vacía, mostrar un mensaje de error
@@ -44,36 +55,34 @@ public class Joc {
         }
     }
     public static boolean jugadaGuanyadora() {
-        novaPartida();
-        short fila = 0;
-        short columna = 0;
-        for (; fila < 3; fila++) {
-            if (novaPartida()[fila][1] != ' ' && novaPartida()[fila][1] == novaPartida()[fila][3] && novaPartida()[fila][3] == novaPartida()[fila][5]) {
+        short fila;
+        short columna;
+        for (fila = 0; fila < 3; fila++) {
+            if (taulell[fila][1] != ' ' && taulell[fila][1] == taulell[fila][3] && taulell[fila][3] == taulell[fila][5]) {
                 return true; // Tres en raya en la fila i
             }
         }
         // Verificar columnas
-        for (;columna < 3; columna++) {
-            if (novaPartida()[0][columna] != ' ' && novaPartida()[0][columna] == novaPartida()[1][columna] && novaPartida()[1][columna] == novaPartida()[2][columna]) {
+        for (columna = 0; columna < 7; columna++) {
+            if (taulell[0][columna] != ' ' && taulell[0][columna] == taulell[1][columna] && taulell[1][columna] == taulell[2][columna]) {
                 return true; // Tres en raya en la columna tal
             }
         }
         // Verificar diagonal principal
-        if (novaPartida()[0][1] != ' ' && novaPartida()[0][1] == novaPartida()[1][3] && novaPartida()[1][3] == novaPartida()[2][5]) {
+        if (taulell[2][0] != ' ' && taulell[2][0] == taulell[1][1] && taulell[1][1] == taulell[0][2]) {
             return true; // Tres en raya en la diagonal principal
         }
 
-        // Verificar diagonal secundaria
-        if (novaPartida()[1][3] != ' ' && novaPartida()[0][5] == novaPartida()[1][3] && novaPartida()[1][3] == novaPartida()[2][1]) {
+        // Verificar diagonal descendente
+        if (taulell[0][0] != ' ' && taulell[0][0] == taulell[1][1] && taulell[1][1] == taulell[2][2]) {
             return true; // Tres en raya en la diagonal secundaria
         }
         return false; // No se encontró un tres en raya
     }
         }
-        return jugadaGuanyadora();
 
 
-    //| | | |
-    //| | | |
-    //| | | |
+    //| |X|O|
+    //|O|X|O|
+    //|X| |O|
 
