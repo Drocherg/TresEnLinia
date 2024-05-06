@@ -57,32 +57,32 @@ public class Joc {
     public static boolean jugadaGuanyadora() {
         short fila;
         short columna;
-        for (fila = 0; fila < 3; fila++) {
+        for (fila = 0; fila < 2; fila++) {
             if (taulell[fila][1] != ' ' && taulell[fila][1] == taulell[fila][3] && taulell[fila][3] == taulell[fila][5]) {
-                return true; // Tres en raya en la fila i
+                return true; // Tres en raya en las filas
             }
         }
         // Verificar columnas
-        for (columna = 0; columna < 7; columna++) {
+        for (columna = 0; columna < 6; columna++) {
             if (taulell[0][columna] != ' ' && taulell[0][columna] == taulell[1][columna] && taulell[1][columna] == taulell[2][columna]) {
-                return true; // Tres en raya en la columna tal
+                return true; // Tres en raya en las columnas
             }
         }
-        // Verificar diagonal principal
-        if (taulell[2][0] != ' ' && taulell[2][0] == taulell[1][1] && taulell[1][1] == taulell[0][2]) {
-            return true; // Tres en raya en la diagonal principal
+        // Verificar diagonal 1
+        if (taulell[2][1] != ' ' && taulell[2][1] == taulell[1][3] && taulell[1][3] == taulell[0][5]) {
+            return true; // Tres en raya en la diagonal 1
         }
 
-        // Verificar diagonal descendente
-        if (taulell[0][0] != ' ' && taulell[0][0] == taulell[1][1] && taulell[1][1] == taulell[2][2]) {
-            return true; // Tres en raya en la diagonal secundaria
+        // Verificar diagonal 2
+        if (taulell[0][1] != ' ' && taulell[0][1] == taulell[1][3] && taulell[1][3] == taulell[2][5]) {
+            return true; // Tres en raya en la diagonal 2
         }
         return false; // No se encontró un tres en raya
     }
         }
 
 
-    //| |X|O|
+    //| |X| |
     //|O|X|O|
     //|X| |O|
 
