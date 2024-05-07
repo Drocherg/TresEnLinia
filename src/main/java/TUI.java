@@ -24,5 +24,6 @@ public class TUI {
     }
 
     public static void finDePartida(short guanyador){
+        joc.jugadaGuanyadora();
     }
 }
