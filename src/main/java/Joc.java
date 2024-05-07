@@ -54,28 +54,56 @@ public class Joc {
         short columna = 3;
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                if (taulell[i][j] != ' ' && taulell[i][j] == taulell[i][j + 1] && taulell[i][j + 1] == taulell[i][j + 2]) {
+                if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i][j + 1] && taulell[i][j + 1] == taulell[i][j + 2]) {
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                if (taulell[i][j] != ' ' && taulell[i][j] == taulell[i + 1][j] && taulell[i + 1][j] == taulell[i + 2][j]) {
+                if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i + 1][j] && taulell[i + 1][j] == taulell[i + 2][j]) {
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                if (taulell[i][j] != ' ' && taulell[i][j] == taulell[i + 1][j + 1] && taulell[i + 1][j + 1] == taulell[i + 2][j + 2]) {
+                if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i + 1][j + 1] && taulell[i + 1][j + 1] == taulell[i + 2][j + 2]) {
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                if (taulell[i][j] != ' ' && taulell[i][j] == taulell[i - 1][j + 1] && taulell[i - 1][j + 1] == taulell[i - 2][j + 2]) {
+                if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i - 1][j + 1] && taulell[i - 1][j + 1] == taulell[i - 2][j + 2]) {
+                    return true;
+                }
+            }
+        }
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                if (taulell[i][j] == 'O' && taulell[i][j] == taulell[i][j + 1] && taulell[i][j + 1] == taulell[i][j + 2]) {
+                    return true;
+                }
+            }
+        }
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                if (taulell[i][j] == 'O' && taulell[i][j] == taulell[i + 1][j] && taulell[i + 1][j] == taulell[i + 2][j]) {
+                    return true;
+                }
+            }
+        }
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                if (taulell[i][j] == 'O' && taulell[i][j] == taulell[i + 1][j + 1] && taulell[i + 1][j + 1] == taulell[i + 2][j + 2]) {
+                    return true;
+                }
+            }
+        }
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                if (taulell[i][j] == 'O' && taulell[i][j] == taulell[i - 1][j + 1] && taulell[i - 1][j + 1] == taulell[i - 2][j + 2]) {
                     return true;
                 }
             }

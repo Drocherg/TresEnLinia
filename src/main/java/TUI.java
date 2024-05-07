@@ -22,6 +22,7 @@ public class TUI {
     public static short recollirJugada(){
         return 0;
     }
+
     public static void finDePartida(short guanyador){
     }
 }
