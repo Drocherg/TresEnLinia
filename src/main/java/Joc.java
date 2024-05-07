@@ -1,5 +1,5 @@
 public class Joc {
-    private char[][] taulell = new char[3][3]; //Como indica el nombre es el tablero del juego que hay que ir actualizando en cada turno ver, metodo jugar
+    private char[][] taulell; //Como indica el nombre es el tablero del juego que hay que ir actualizando en cada turno ver, metodo jugar
     private short torn;
 
     public short getTorn() {
