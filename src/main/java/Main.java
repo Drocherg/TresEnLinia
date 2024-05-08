@@ -26,7 +26,7 @@ public class Main {
     private void novaPartida() {
         System.out.println("Has escollit Nova Partida");
         System.out.println();
-        Joc.novaPartida();
+        //Joc.novaPartida();
     }
     private void carregarPartida() {
         System.out.println("Has escollit carrega partida");
