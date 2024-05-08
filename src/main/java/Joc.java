@@ -11,10 +11,11 @@ public class Joc {
     }
 
     public Joc() {
-        this.taulell = new char[3][7]; // Inicializar el tablero con el tamaño adecuado
+
+        this.taulell = new char[3][3]; // Inicializar el tablero con el tamaño adecuado
         // Inicializar el tablero con espacios en blanco (indicando celdas vacías)
         for (int fila = 0; fila < 3; fila++) {
-            for (int columna = 0; columna < 7; columna++) {
+            for (int columna = 0; columna < 3; columna++) {
                 taulell[fila][columna] = ' ';
             }
         }
@@ -39,13 +40,11 @@ public class Joc {
 
             if (jugadaGuanyadora() == true) {
                 // Si hay un ganador, mostrar un mensaje y terminar el juego
-                System.out.println("¡El jugador " + jugadorActual + " ha guanyat!");
             } else {
                 return;
             }
         } else {
             // Si la casilla seleccionada no está vacía, mostrar un mensaje de error
-            System.out.println("La casella seleccionada no està buida, no estaràs fent trampes?");
         }
     }
 

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class TUI {
-    static Joc joc = new Joc();
+
     private static Scanner sc = new Scanner(System.in);
     public static int mostrarMenu() {
         System.out.println("Escull una opció");
@@ -16,14 +16,13 @@ public class TUI {
 
     }
     public static void mostrarTaulell(char taulell, short torn){
-        joc.getTaulell();
-        joc.getTorn();
+
     }
     public static short recollirJugada(){
         return 0;
     }
 
     public static void finDePartida(short guanyador){
-        joc.jugadaGuanyadora();
+
     }
 }

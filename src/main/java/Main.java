@@ -24,20 +24,15 @@ public class Main {
 
     }
     private void novaPartida() {
-        System.out.println("Has escollit Nova Partida");
-        System.out.println();
-        //Joc.novaPartida();
+
     }
     private void carregarPartida() {
-        System.out.println("Has escollit carrega partida");
-        System.out.println();
+
     }
     private void configuracio() {
-        System.out.println("Has escollit configuració");
-        System.out.println();
+
     }
     private void sortir() {
-        System.out.println("Has escollit sortir");
-        System.out.println();
+
     }
 }
