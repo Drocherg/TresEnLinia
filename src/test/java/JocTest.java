@@ -1,26 +1,26 @@
-/*import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class JocTest {
 
-    @Test
-    void creacion () {
-        String[][] tableroEsperado = {
-                {"|"," ","|"," ","|"," ","|"},
-                {"|"," ","|"," ","|"," ","|"},
-                {"|"," ","|"," ","|"," ","|"}
-        };
+    @org.junit.jupiter.api.Test
+    void novaPartida() {
         Joc joc = new Joc();
-        Assertions.assertArrayEquals(tableroEsperado, joc.getTaulell());
-    }
 
-    @Test
-    void primerturno() {
-        int x = 1;
-        int y = 1;
-        char[][] tc = new char[3][7];
-        tc[x][y] = 'X';
-        Joc joc = new Joc();
-        Assertions.assertArrayEquals(tc, joc.getTaulell());
+        //create an empty board
+        char[][] empty_board = new char[3][3];
+
+        //get our board
+        joc.novaPartida();
+        char[][] my_board = joc.getTaulell();
+
+        //test empty board
+        Assertions.assertArrayEquals(empty_board, my_board);
+
+        //test player1 turn
+        Assertions.assertEquals(1, joc.getTorn());
+
+        //test player2 turn
+        Assertions.assertEquals(2, joc.getTorn() + 1);
     }
-}*/
+}
