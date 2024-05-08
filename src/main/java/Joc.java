@@ -48,61 +48,71 @@ public class Joc {
         }
     }
 
-    public boolean jugadaGuanyadora() {
+    public boolean jugadaGuanyadora(boolean liniaX, boolean liniaO) {
+        liniaX = false;
+        liniaO = false;
         short fila = 3;
         short columna = 3;
         for (int i = 0; i < fila; i++) {
-            for (int j = 0; j < columna; j++) {
+            for (int j = 0; j < columna; j++) {// Tres en raya en las columnas con X
                 if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i][j + 1] && taulell[i][j + 1] == taulell[i][j + 2]) {
+                    liniaX = true;
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
-            for (int j = 0; j < columna; j++) {
+            for (int j = 0; j < columna; j++) {// Tres en raya en las filas con la X
                 if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i + 1][j] && taulell[i + 1][j] == taulell[i + 2][j]) {
+                    liniaX = true;
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
-            for (int j = 0; j < columna; j++) {
+            for (int j = 0; j < columna; j++) {// Tres en raya en diagonales descendente con X
                 if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i + 1][j + 1] && taulell[i + 1][j + 1] == taulell[i + 2][j + 2]) {
+                    liniaX = true;
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
-            for (int j = 0; j < columna; j++) {
+            for (int j = 0; j < columna; j++) {// Tres en raya en diagonal ascendente con X
                 if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i - 1][j + 1] && taulell[i - 1][j + 1] == taulell[i - 2][j + 2]) {
+                    liniaX = true;
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
-            for (int j = 0; j < columna; j++) {
+            for (int j = 0; j < columna; j++) {// Tres en raya en las columnas con O
                 if (taulell[i][j] == 'O' && taulell[i][j] == taulell[i][j + 1] && taulell[i][j + 1] == taulell[i][j + 2]) {
+                    liniaO = true;
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
-            for (int j = 0; j < columna; j++) {
+            for (int j = 0; j < columna; j++) {// Tres en raya en las filas con O
                 if (taulell[i][j] == 'O' && taulell[i][j] == taulell[i + 1][j] && taulell[i + 1][j] == taulell[i + 2][j]) {
+                    liniaO = true;
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
-            for (int j = 0; j < columna; j++) {
+            for (int j = 0; j < columna; j++) {// Tres en raya en diagonales descendente con O
                 if (taulell[i][j] == 'O' && taulell[i][j] == taulell[i + 1][j + 1] && taulell[i + 1][j + 1] == taulell[i + 2][j + 2]) {
+                    liniaO = true;
                     return true;
                 }
             }
         }
         for (int i = 0; i < fila; i++) {
-            for (int j = 0; j < columna; j++) {
+            for (int j = 0; j < columna; j++) {// Tres en raya en diagonal ascendente con O
                 if (taulell[i][j] == 'O' && taulell[i][j] == taulell[i - 1][j + 1] && taulell[i - 1][j + 1] == taulell[i - 2][j + 2]) {
+                    liniaO = true;
                     return true;
                 }
             }
@@ -114,7 +124,7 @@ public class Joc {
 
         /*for (fila = 0; fila < 2; fila++) {
             if (taulell[fila][1] != ' ' && taulell[fila][1] == taulell[fila][3] && taulell[fila][3] == taulell[fila][5]) {
-                return true; // Tres en raya en las filas
+                return true;
             }
         }
         // Verificar columnas
