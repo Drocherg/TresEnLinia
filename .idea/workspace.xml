@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Retoques en metodo jugadaGuanyadora y Tests">
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Joctest modificado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Joc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Joc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/JocTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JocTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.JocTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.primerturno.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.JocTest.executor": "Run",
+    "JUnit.JocTest.jugada_jugador1.executor": "Run",
+    "JUnit.JocTest.novaPartida.executor": "Run",
+    "JUnit.JocTest.primerturno.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.JocTest">
+}]]></component>
+  <component name="RunManager" selected="JUnit.JocTest.jugada_jugador1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TresEnLinia" />
@@ -80,6 +80,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JocTest.jugada_jugador1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TresEnLinia" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JocTest" />
+      <option name="METHOD_NAME" value="jugada_jugador1(short,short)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JocTest.novaPartida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TresEnLinia" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JocTest" />
+      <option name="METHOD_NAME" value="novaPartida" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JocTest.primerturno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TresEnLinia" />
       <option name="PACKAGE_NAME" value="" />
@@ -92,7 +112,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JocTest.jugada_jugador1" />
         <item itemvalue="JUnit.JocTest" />
+        <item itemvalue="JUnit.JocTest.novaPartida" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.JocTest.primerturno" />
       </list>
@@ -235,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714989618647</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Joctest modificado">
+      <option name="closed" value="true" />
+      <created>1715188629827</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715188629827</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +293,7 @@
     <MESSAGE value="Arreglado el que te vuelva a pedir otro numero" />
     <MESSAGE value="Comenzando pruebas unitarias" />
     <MESSAGE value="Retoques en metodo jugadaGuanyadora y Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retoques en metodo jugadaGuanyadora y Tests" />
+    <MESSAGE value="Joctest modificado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Joctest modificado" />
   </component>
 </project>
