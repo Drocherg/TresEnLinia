@@ -7,20 +7,20 @@ class JocTest {
     void novaPartida() {
         Joc joc = new Joc();
 
-        //create an empty board
-        char[][] empty_board = new char[3][3];
+        //crea un tablero vacio
+        char[][] t_vacio = new char[3][3];
 
-        //get our board
+        //Coge el tablero
         joc.novaPartida();
-        char[][] my_board = joc.getTaulell();
+        char[][] tablero = joc.getTaulell();
 
-        //test empty board
-        Assertions.assertArrayEquals(empty_board, my_board);
+        //Prueba el tablero vacio
+        Assertions.assertArrayEquals(t_vacio, tablero);
 
-        //test player1 turn
+        //prueba el turno 1 del jugador 1
         Assertions.assertEquals(1, joc.getTorn());
 
-        //test player2 turn
+        //prueba el turno 2 del jugador 2
         Assertions.assertEquals(2, joc.getTorn() + 1);
     }
 }
