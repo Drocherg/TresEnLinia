@@ -15,14 +15,14 @@ public class TUI {
         return opcioEscollida;
 
     }
-    public static void mostrarTaulell(char taulell, short torn){
-
+    public void mostrarTaulell(char taulell, short torn){
+    
     }
     public static short recollirJugada(){
         return 0;
     }
 
     public static void finDePartida(short guanyador){
-
+    
     }
 }

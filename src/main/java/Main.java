@@ -24,7 +24,8 @@ public class Main {
 
     }
     private void novaPartida() {
-
+        joc.novaPartida();
+        tui.mostrarTaulell(char taulell, short torn);
     }
     private void carregarPartida() {
 
