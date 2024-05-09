@@ -12,6 +12,7 @@ public class TUI {
         System.out.println("4. Sortir");
         int opcioEscollida = sc.nextInt();
         sc.nextLine();
+
         return opcioEscollida;
 
     }

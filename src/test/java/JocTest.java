@@ -32,10 +32,29 @@ class JocTest {
         char[][] tablero = new char[3][3];
 
         //Pone una x en una fila/columna
-        tablero[fila][columna] = ' ';
+        tablero[fila][columna] = 'X';
         //Jugada del jugador 1
         joc.novaPartida();
         joc.jugar(fila,columna);
+
+        //comprueba que es el turno del jugador 1 antes de hacer la jugada
+        Assertions.assertEquals(1, joc.getTorn());
+        //comprueba la jugada
+        Assertions.assertArrayEquals(tablero, joc.getTaulell());
+    }
+    @ParameterizedTest
+    @CsvSource({"0,0","0,1","0,2","1,0","1,1","1,2","2,0","2,1","2,2"})
+    void jugada_jugador2(short fila, short columna) {
+        Joc joc = new Joc();
+        char[][] tablero = new char[3][3];
+
+        //Pone una x en una fila/columna
+        tablero[fila][columna] = 'O';
+        //Jugada del jugador 2
+        joc.novaPartida();
+        joc.jugar(fila,columna);
+        //comprueba que es el turno del jugador 2 antes de hacer la jugada
+        Assertions.assertEquals(2, joc.getTorn() + 1);
         //comprueba la jugada
         Assertions.assertArrayEquals(tablero, joc.getTaulell());
     }

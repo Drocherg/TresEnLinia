@@ -28,7 +28,7 @@ public class Joc {
     }
 
     public void jugar(short fila, short columna) {
-        if (taulell[fila][columna] == ' ') {
+        if (taulell[fila][columna] != ' ') {
             // Determinar el jugador actual en función del turno
             char jugadorActual = (torn % 2 == 1) ? 'X' : 'O';
 
@@ -56,8 +56,7 @@ public class Joc {
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {// Tres en raya en las columnas con X
                 if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i][j + 1] && taulell[i][j + 1] == taulell[i][j + 2]) {
-                    liniaX = true;
-                    return true;
+                    return liniaX;
                 }
             }
         }

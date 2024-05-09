@@ -27,6 +27,9 @@ public class Main {
         joc.novaPartida();
         tui.mostrarTaulell();
     }
+    private void partidaEnCurso(){
+
+    }
     private void carregarPartida() {
 
     }
