@@ -20,6 +20,8 @@ public class TUI {
     
     }
     public static short recollirJugada(){
+        short posicionX = sc.nextShort();
+        short posicionY;
         return 0;
     }
 
