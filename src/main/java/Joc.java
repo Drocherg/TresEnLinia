@@ -48,9 +48,9 @@ public class Joc {
         }
     }
 
-    public boolean jugadaGuanyadora(boolean liniaX, boolean liniaO) {
-        liniaX = false;
-        liniaO = false;
+    public boolean jugadaGuanyadora() {
+        boolean liniaX = false;
+        boolean liniaO = false;
         short fila = 3;
         short columna = 3;
         for (int i = 0; i < fila; i++) {

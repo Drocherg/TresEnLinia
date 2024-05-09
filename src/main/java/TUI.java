@@ -15,7 +15,7 @@ public class TUI {
         return opcioEscollida;
 
     }
-    public void mostrarTaulell(char taulell, short torn){
+    public void mostrarTaulell(){
     
     }
     public static short recollirJugada(){

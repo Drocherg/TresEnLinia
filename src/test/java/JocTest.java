@@ -32,7 +32,7 @@ class JocTest {
         char[][] tablero = new char[3][3];
 
         //Pone una x en una fila/columna
-        tablero[fila][columna] = 'X';
+        tablero[fila][columna] = ' ';
         //Jugada del jugador 1
         joc.novaPartida();
         joc.jugar(fila,columna);
