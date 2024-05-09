@@ -27,6 +27,11 @@ public class Main {
         joc.novaPartida();
         tui.mostrarTaulell();
     }
+    private void partidaEnCurso(){
+        joc.jugar(fila, columna);
+        joc.jugadaGuanyadora();
+
+    }
     private void carregarPartida() {
 
     }
