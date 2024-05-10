@@ -26,6 +26,7 @@ public class Main {
     private void novaPartida() {
         joc.novaPartida();
         tui.mostrarTaulell();
+
     }
     private void partidaEnCurso(){
         joc.jugar();

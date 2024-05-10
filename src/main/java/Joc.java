@@ -1,5 +1,5 @@
 public class Joc {
-    private char[][] taulell; //Como indica el nombre es el tablero del juego que hay que ir actualizando en cada turno ver, metodo jugar
+    private char[][] taulell; //Como indica el nombre es el tablero del juego que hay que ir actualizando en cada turno, ver metodo jugar
     private short torn;
 
     public short getTorn() {
@@ -46,8 +46,8 @@ public class Joc {
     public boolean jugadaGuanyadora(){
         boolean liniaX = false;
         boolean liniaO = false;
-        fila = 0;
-        columna = 0;
+        short fila = 3;
+        short columna = 3;
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {// Tres en raya en las columnas con X
                 if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i][j + 1] && taulell[i][j + 1] == taulell[i][j + 2]) {
