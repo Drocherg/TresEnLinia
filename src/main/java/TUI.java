@@ -19,10 +19,9 @@ public class TUI {
     public void mostrarTaulell(){
     
     }
-    public static short recollirJugada(){
+    public static void  recollirJugada(){
         short posicionX = sc.nextShort();
         short posicionY = sc.nextShort();
-        return 0;
     }
 
     public static void finDePartida(short guanyador){
