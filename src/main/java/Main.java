@@ -28,9 +28,8 @@ public class Main {
         tui.mostrarTaulell();
     }
     private void partidaEnCurso(){
-        joc.jugar(fila, columna);
-        joc.jugadaGuanyadora();
-
+        joc.jugar();
+        TUI.recollirJugada();
     }
     private void carregarPartida() {
 
@@ -41,4 +40,5 @@ public class Main {
     private void sortir() {
 
     }
+
 }

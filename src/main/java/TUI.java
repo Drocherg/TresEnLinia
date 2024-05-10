@@ -21,7 +21,7 @@ public class TUI {
     }
     public static short recollirJugada(){
         short posicionX = sc.nextShort();
-        short posicionY;
+        short posicionY = sc.nextShort();
         return 0;
     }
 

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="He intentado comunicar desde el main joc.novaPartida y tui.mostrartaulell">
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Cambios varios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Joc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Joc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -276,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715272725217</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Cambios varios">
+      <option name="closed" value="true" />
+      <created>1715274840004</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715274840004</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +314,7 @@
     <MESSAGE value="Retoques en metodo jugadaGuanyadora y Tests" />
     <MESSAGE value="Joctest modificado" />
     <MESSAGE value="He intentado comunicar desde el main joc.novaPartida y tui.mostrartaulell" />
-    <option name="LAST_COMMIT_MESSAGE" value="He intentado comunicar desde el main joc.novaPartida y tui.mostrartaulell" />
+    <MESSAGE value="Cambios varios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios varios" />
   </component>
 </project>
