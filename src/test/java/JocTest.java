@@ -35,7 +35,7 @@ class JocTest {
         tablero[fila][columna] = ' ';
         //Jugada del jugador 1
         joc.novaPartida();
-        joc.jugar(fila,columna);
+        joc.jugar();
         //comprueba la jugada
         Assertions.assertArrayEquals(tablero, joc.getTaulell());
     }

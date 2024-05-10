@@ -27,7 +27,9 @@ public class Joc {
         this.torn = 1;
     }
 
-    public void jugar(short fila, short columna) {
+    public boolean jugar() {
+        short fila = 0;
+        short columna = 0;
         if (taulell[fila][columna] == ' ') {
             // Determinar el jugador actual en función del turno
             char jugadorActual = (torn % 2 == 1) ? 'X' : 'O';
@@ -37,14 +39,15 @@ public class Joc {
 
             // Incrementar el contador de turnos
             torn++;
-
+        }
+        return false;
     }
 
-    public boolean jugadaGuanyadora() {
+    public boolean jugadaGuanyadora(){
         boolean liniaX = false;
         boolean liniaO = false;
-        short fila = ;
-        short columna;
+        fila = 0;
+        columna = 0;
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {// Tres en raya en las columnas con X
                 if (taulell[i][j] == 'X' && taulell[i][j] == taulell[i][j + 1] && taulell[i][j + 1] == taulell[i][j + 2]) {
