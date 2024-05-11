@@ -24,20 +24,31 @@ public class Main {
 
     }
     private void novaPartida() {
-        System.out.println("Has escollit Nova Partida");
-        System.out.println();
-        Joc.novaPartida();
+        tui.selNovaPartida();
+        joc.novaPartida();
+        tui.mostrarTaulell(joc.getTaulell());
+
+        while (true) { // Bucle infinito
+            short[] jugada = tui.recollirJugada(); // Solicitar una nueva jugada
+            joc.jugar(jugada[0], jugada[1]); // Realizar la jugada
+            tui.mostrarTaulell(joc.getTaulell()); // Mostrar el tablero actualizado
+
+            if (joc.jugadaGuanyadora()) {
+                break; // Salir del bucle si hay una jugada ganadora
+            }
+        }
+    }
+    private void partidaEnCurso(){
+
     }
     private void carregarPartida() {
-        System.out.println("Has escollit carrega partida");
-        System.out.println();
+
     }
     private void configuracio() {
-        System.out.println("Has escollit configuració");
-        System.out.println();
+
     }
     private void sortir() {
-        System.out.println("Has escollit sortir");
-        System.out.println();
+
     }
+
 }

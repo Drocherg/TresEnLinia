@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class TUI {
-    static Joc joc = new Joc();
+
     private static Scanner sc = new Scanner(System.in);
     public static int mostrarMenu() {
         System.out.println("Escull una opció");
@@ -15,13 +15,28 @@ public class TUI {
         return opcioEscollida;
 
     }
-    public static void mostrarTaulell(char taulell, short torn){
-        joc.getTaulell();
-        joc.getTorn();
+    public char[][] mostrarTaulell(char[][] taulell) {
+        for (int fila = 0; fila < taulell.length; fila++) {
+            for (int columna = 0; columna < taulell[fila].length; columna++) {
+                System.out.print("| " + taulell[fila][columna] + " ");
+            }
+            System.out.println("|"); // Nueva línea después de cada fila
+            // Línea divisoria entre las filas
+            System.out.println("-------------");
+        }
+        return taulell;
     }
-    public static short recollirJugada(){
-        return 0;
+    public static short[] recollirJugada() {
+        System.out.println("Introdueix la jugada (fila i columna):");
+        short fila = sc.nextShort();
+        short columna = sc.nextShort();
+        return new short[]{fila, columna};
     }
+
     public static void finDePartida(short guanyador){
+    
+    }
+    public void selNovaPartida(){
+        System.out.println("Has seleccionat nova partida");
     }
 }
