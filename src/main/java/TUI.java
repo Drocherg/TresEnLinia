@@ -33,8 +33,8 @@ public class TUI {
         return new short[]{fila, columna};
     }
 
-    public static void finDePartida(short guanyador){
-        if (guanyador == 1){
+    public static void finDePartida(boolean guanyador){
+        if (guanyador == true){
             System.out.println("El jugador 2 ha guanyat;");
         } else
             System.out.println("El jugador 1 ha guanyat;");
