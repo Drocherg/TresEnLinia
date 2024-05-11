@@ -37,9 +37,9 @@ public class Main {
                 break; // Salir del bucle si hay una jugada ganadora
             }
         }
-        boolean guanyador;
-        guanyador = (joc.getTorn() % 2 == 1);
-        TUI.finDePartida(guanyador);
+        char guanyador;
+        guanyador = (joc.getTorn() % 2 == 1) ? 'X' : 'O';
+        tui.finDePartida(guanyador);
     }
 
     private void carregarPartida() {

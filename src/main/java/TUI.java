@@ -33,11 +33,13 @@ public class TUI {
         return new short[]{fila, columna};
     }
 
-    public static void finDePartida(boolean guanyador){
-        if (guanyador == true){
+    public static void finDePartida(char guanyador){
+        if (guanyador == 'X'){
             System.out.println("El jugador 2 ha guanyat;");
-        } else
+        } else if (guanyador == 'O'){
             System.out.println("El jugador 1 ha guanyat;");
+        } else
+            System.out.println("Empat");
     }
 
     public void selNovaPartida(){
