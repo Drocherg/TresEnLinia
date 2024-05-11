@@ -34,9 +34,33 @@ public class TUI {
     }
 
     public static void finDePartida(short guanyador){
-    
+        if (guanyador == 1){
+            System.out.println("El jugador 2 ha guanyat;");
+        } else
+            System.out.println("El jugador 1 ha guanyat;");
     }
+
     public void selNovaPartida(){
         System.out.println("Has seleccionat nova partida");
+    }
+
+    public void selConfiguracio(){
+        System.out.println("Has seleccionat configuració");
+        System.out.println();
+        System.out.println("1. Mida del taulell");
+        System.out.println("2. Sortir");
+        short opcioEscollidaC = sc.nextShort();
+
+        if (opcioEscollidaC == 1){
+            System.out.println("Escull la nova mida del taulell");
+            int novaMidaX = sc.nextInt();
+            int novaMidaY = sc.nextInt();
+
+        } else if (opcioEscollidaC == 2) {
+            System.out.println("Sortint");
+            mostrarMenu();
+
+        } else
+            selConfiguracio();
     }
 }

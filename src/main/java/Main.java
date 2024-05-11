@@ -37,15 +37,16 @@ public class Main {
                 break; // Salir del bucle si hay una jugada ganadora
             }
         }
+        char guanyador;
+        guanyador = (joc.getTorn() % 2 == 1) ? 'X' : 'O';
+        tui.finDePartida((short) guanyador);
     }
-    private void partidaEnCurso(){
 
-    }
     private void carregarPartida() {
 
     }
     private void configuracio() {
-
+        tui.selConfiguracio();
     }
     private void sortir() {
 
