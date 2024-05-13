@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class TUI {
 
+    static boolean control = false;
+    int torn = 0;
+
     private static Scanner sc = new Scanner(System.in);
     public static int mostrarMenu() {
         System.out.println("Escull una opció");
@@ -29,19 +32,39 @@ public class TUI {
         return taulell;
     }
     public static short[] recollirJugada() {
-        System.out.println("Introdueix la jugada (fila i columna):");
+        jugadorActual();
         short fila = sc.nextShort();
         short columna = sc.nextShort();
         return new short[]{fila, columna};
     }
 
+    public static void jugadorActual(int torn){
+
+        while (control == false){
+            char tornJugador = (torn % 2 == 1) ? 'X' : 'O';
+            if (tornJugador == 'O') {
+                System.out.println("Introdueix la jugada Jugador X (fila i columna):");
+                break;
+            } else if (tornJugador == 'X') {
+                System.out.println("Introdueix la jugada Jugador O (fila i columna):");
+                break;
+            }
+            torn++;
+        }
+    }
+
+
     public static void finDePartida(char guanyador){
+
         if (guanyador == 'X'){
             System.out.println("El jugador 2 ha guanyat;");
+            control = true;
         } else if (guanyador == 'O'){
             System.out.println("El jugador 1 ha guanyat;");
+            control = true;
         } else
             System.out.println("Empat");
+        control = true;
     }
 
     public void selNovaPartida(){
@@ -70,4 +93,5 @@ public class TUI {
         } else
             selConfiguracio();
     }
+
 }

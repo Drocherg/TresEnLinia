@@ -30,6 +30,7 @@ public class Main {
 
         while (true) { // Bucle infinito
             short[] jugada = tui.recollirJugada(); // Solicitar una nueva jugada
+            tui.jugadorActual();
             joc.jugar(jugada[0], jugada[1]); // Realizar la jugada
             tui.mostrarTaulell(joc.getTaulell()); // Mostrar el tablero actualizado
             joc.empat();
@@ -40,6 +41,7 @@ public class Main {
         char guanyador;
         guanyador = (joc.getTorn() % 2 == 1) ? 'X' : 'O';
         tui.finDePartida(guanyador);
+
     }
 
     private void carregarPartida() {
