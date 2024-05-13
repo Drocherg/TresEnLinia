@@ -24,19 +24,29 @@ public class Main {
 
     }
     private void novaPartida() {
+        tui.selNovaPartida();
         joc.novaPartida();
-        tui.mostrarTaulell();
+        tui.mostrarTaulell(joc.getTaulell());
 
+        while (true) { // Bucle infinito
+            short[] jugada = tui.recollirJugada(); // Solicitar una nueva jugada
+            joc.jugar(jugada[0], jugada[1]); // Realizar la jugada
+            tui.mostrarTaulell(joc.getTaulell()); // Mostrar el tablero actualizado
+
+            if (joc.jugadaGuanyadora()) {
+                break; // Salir del bucle si hay una jugada ganadora
+            }
+        }
+        char guanyador;
+        guanyador = (joc.getTorn() % 2 == 1) ? 'X' : 'O';
+        tui.finDePartida(guanyador);
     }
-    private void partidaEnCurso(){
-        joc.jugar();
-        TUI.recollirJugada();
-    }
+
     private void carregarPartida() {
 
     }
     private void configuracio() {
-
+        tui.selConfiguracio();
     }
     private void sortir() {
 
