@@ -4,6 +4,12 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class JocTest {
+    @org.junit.jupiter.api.Test
+    void mostrarMenu() {
+        TUI tui = new TUI();
+        mostrarMenu();
+
+    }
 
     @org.junit.jupiter.api.Test
     void novaPartida() {

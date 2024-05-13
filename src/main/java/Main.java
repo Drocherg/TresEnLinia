@@ -49,7 +49,7 @@ public class Main {
         tui.selConfiguracio();
     }
     private void sortir() {
-
+        tui.selSortir();
     }
 
 }

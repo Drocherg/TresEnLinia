@@ -47,6 +47,9 @@ public class TUI {
     public void selNovaPartida(){
         System.out.println("Has seleccionat nova partida");
     }
+    public void selSortir(){
+        System.out.println("Tirando de cable...");
+    }
 
     public void selConfiguracio(){
         System.out.println("Has seleccionat configuració");

@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="finDePartida hecho y configuracion a medias">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Joc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Joc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/JocTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JocTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,25 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.JocTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.jugada_jugador1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.jugada_jugador2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.novaPartida.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.primerturno.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.JocTest.executor": "Run",
+    "JUnit.JocTest.jugada_jugador1.executor": "Run",
+    "JUnit.JocTest.jugada_jugador2.executor": "Run",
+    "JUnit.JocTest.mostrarMenu.executor": "Run",
+    "JUnit.JocTest.novaPartida.executor": "Run",
+    "JUnit.JocTest.primerturno.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -82,21 +83,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JocTest.jugada_jugador1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TresEnLinia" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JocTest" />
-      <option name="METHOD_NAME" value="jugada_jugador1(short,short)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="JocTest.jugada_jugador2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TresEnLinia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JocTest" />
       <option name="METHOD_NAME" value="jugada_jugador2(short,short)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JocTest.mostrarMenu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TresEnLinia" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JocTest" />
+      <option name="METHOD_NAME" value="mostrarMenu" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,10 +116,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.JocTest.mostrarMenu" />
         <item itemvalue="JUnit.JocTest" />
         <item itemvalue="JUnit.JocTest.novaPartida" />
         <item itemvalue="JUnit.JocTest.jugada_jugador2" />
-        <item itemvalue="JUnit.JocTest.jugada_jugador1" />
       </list>
     </recent_temporary>
   </component>
