@@ -32,7 +32,7 @@ public class Main {
             short[] jugada = tui.recollirJugada(); // Solicitar una nueva jugada
             joc.jugar(jugada[0], jugada[1]); // Realizar la jugada
             tui.mostrarTaulell(joc.getTaulell()); // Mostrar el tablero actualizado
-
+            joc.empat();
             if (joc.jugadaGuanyadora()) {
                 break; // Salir del bucle si hay una jugada ganadora
             }

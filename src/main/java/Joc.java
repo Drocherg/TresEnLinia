@@ -55,11 +55,19 @@ public class Joc {
 
         return false; // No se encontró un tres en raya
     }
+    public boolean empat() {
+    int contador = 0;
+        for (int i = 0; i < taulell.length; i++) {
+            for (int j = 0; j < taulell[i].length; j++) {
+                if (taulell[i][j] == ' '){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
-
-
 
     //| |X| |
     //|O|X|O|
     //|X| |O|
-
