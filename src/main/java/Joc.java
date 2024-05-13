@@ -1,5 +1,6 @@
 public class Joc {
-    private char[][] taulell; //Como indica el nombre es el tablero del juego que hay que ir actualizando en cada turno, ver metodo jugar
+    private char[][] taulell;
+    //Como indica el nombre es el tablero del juego que hay que ir actualizando en cada turno, ver metodo jugar
     private short torn;
 
     public short getTorn() {
@@ -8,18 +9,6 @@ public class Joc {
 
     public char[][] getTaulell() {
         return taulell;
-    }
-
-    public Joc() {
-
-        this.taulell = new char[3][3]; // Inicializar el tablero con el tamaño adecuado
-        // Inicializar el tablero con espacios en blanco (indicando celdas vacías)
-        for (int fila = 0; fila < 3; fila++) {
-            for (int columna = 0; columna < 3; columna++) {
-                taulell[fila][columna] = ' ';
-            }
-        }
-        this.torn = 0; // Inicializar el contador de turnos a 0
     }
 
     public void novaPartida() {
