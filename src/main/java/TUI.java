@@ -17,6 +17,7 @@ public class TUI {
 
     }
     public char[][] mostrarTaulell(char[][] taulell) {
+        System.out.println("-------------");
         for (int fila = 0; fila < taulell.length; fila++) {
             for (int columna = 0; columna < taulell[fila].length; columna++) {
                 System.out.print("| " + taulell[fila][columna] + " ");
