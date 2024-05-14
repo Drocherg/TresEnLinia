@@ -30,7 +30,6 @@ public class Main {
 
         while (true) { // Bucle infinito
             short[] jugada = tui.recollirJugada(); // Solicitar una nueva jugada
-            tui.jugadorActual();
             joc.jugar(jugada[0], jugada[1]); // Realizar la jugada
             tui.mostrarTaulell(joc.getTaulell()); // Mostrar el tablero actualizado
             joc.empat();

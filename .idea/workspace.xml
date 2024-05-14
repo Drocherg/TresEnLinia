@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="finDePartida hecho y configuracion a medias">
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="JocTest Prueba jugada 2 añadida">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TUI.java" afterDir="false" />
@@ -31,12 +31,12 @@
     &quot;assignee&quot;: &quot;Drocherg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Drocherg/TresEnLinia.git&quot;,
-    &quot;accountId&quot;: &quot;5dedd5ef-1d67-4a02-911d-a697b352106b&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Drocherg/TresEnLinia.git",
+    "accountId": "b7aff0c5-06b8-4b5c-90a3-358cd2deb977"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -48,7 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.JocTest.executor": "Run",
     "JUnit.JocTest.jugada_jugador1.executor": "Run",
@@ -116,19 +116,12 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.JocTest.mostrarMenu" />
         <item itemvalue="JUnit.JocTest" />
+        <item itemvalue="JUnit.JocTest.mostrarMenu" />
         <item itemvalue="JUnit.JocTest.novaPartida" />
         <item itemvalue="JUnit.JocTest.jugada_jugador2" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -307,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715444869339</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="JocTest Prueba jugada 2 añadida">
+      <option name="closed" value="true" />
+      <created>1715615762319</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1715615762319</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,7 +341,8 @@
     <MESSAGE value="Cambios varios" />
     <MESSAGE value="Cambios en jugar" />
     <MESSAGE value="finDePartida hecho y configuracion a medias" />
-    <option name="LAST_COMMIT_MESSAGE" value="finDePartida hecho y configuracion a medias" />
+    <MESSAGE value="JocTest Prueba jugada 2 añadida" />
+    <option name="LAST_COMMIT_MESSAGE" value="JocTest Prueba jugada 2 añadida" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -349,6 +351,15 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/TUI.java</url>
+          <line>33</line>
+          <properties class="TUI" method="recollirJugada">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

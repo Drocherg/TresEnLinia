@@ -32,25 +32,15 @@ public class TUI {
         return taulell;
     }
     public static short[] recollirJugada() {
-        jugadorActual();
         short fila = sc.nextShort();
         short columna = sc.nextShort();
-        return new short[]{fila, columna};
-    }
-
-    public static void jugadorActual(int torn){
-
-        while (control == false){
-            char tornJugador = (torn % 2 == 1) ? 'X' : 'O';
-            if (tornJugador == 'O') {
-                System.out.println("Introdueix la jugada Jugador X (fila i columna):");
-                break;
-            } else if (tornJugador == 'X') {
-                System.out.println("Introdueix la jugada Jugador O (fila i columna):");
-                break;
-            }
-            torn++;
+        short tfila = 3;
+        short tcolumna = 3; //mas adelante podremos cambiarlo con el archivo de configuracion
+        if (fila > 2 || columna > 2){
+            System.out.println("La jugada seleccionada se sale del tablero");
+            recollirJugada();
         }
+        return new short[]{fila, columna};
     }
 
 
