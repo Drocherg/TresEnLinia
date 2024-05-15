@@ -56,15 +56,17 @@ public class Joc {
         return false; // No se encontró un tres en raya
     }
     public boolean empat() {
-    int contador = 0;
-        for (int i = 0; i < taulell.length; i++) {
-            for (int j = 0; j < taulell[i].length; j++) {
-                if (taulell[i][j] == ' '){
-                    return false;
+        for (int fila = 0; fila < 3; fila++) {
+            for (int columna = 0; columna < 3; columna++) {
+                if (taulell[fila][columna] == ' ') {
+                    return false; // Si alguna casilla está vacía, no es empate
                 }
             }
         }
-        return true;
+        return true; // Si todas las casillas están llenas, es empate
+    }
+    public void tEmpat(){
+        System.out.println("No hi han mes caselles lliures, queda en empat!");
     }
 }
 
