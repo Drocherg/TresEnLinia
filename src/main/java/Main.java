@@ -41,7 +41,10 @@ public class Main {
         }
         char guanyador;
         guanyador = (joc.getTorn() % 2 == 1) ? 'X' : 'O';
-        tui.finDePartida(guanyador);
+        if (joc.empat() == false){
+            tui.finDePartida(guanyador);
+        }
+
 
     }
 

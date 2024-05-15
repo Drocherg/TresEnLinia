@@ -1,7 +1,8 @@
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.io.IOException;
 
 class JocTest {
     @org.junit.jupiter.api.Test
@@ -71,3 +72,27 @@ class JocTest {
 
     }
 }
+    /*@org.junit.jupiter.api.Test
+    void empat() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        joc.tui.taulellConfigurat((short) 3);
+        joc.novaPartida();
+
+        int board_row = joc.getTaulell().length;
+        int board_column = joc.getTaulell()[0].length;
+
+        //Hace un tablero para que gane el jugador 1
+        joc.jugar((short) 0, (short) 1);
+        joc.jugar((short) 0, (short) 0);
+        joc.jugar((short) 1, (short) 0);
+        joc.jugar((short) 0, (short) 2);
+        joc.jugar((short) 1, (short) 1);
+        joc.jugar((short) 1, (short) 2);
+        joc.jugar((short) 2, (short) 0);
+        joc.jugar((short) 2, (short) 1);
+        joc.jugar((short) 2, (short) 2);
+
+        Assertions.assertTrue(joc.empat());
+    }
+}*/
