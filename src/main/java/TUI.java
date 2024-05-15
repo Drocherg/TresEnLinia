@@ -31,7 +31,7 @@ public class TUI {
         }
         return taulell;
     }
-    public static short[] recollirJugada() {
+    public short[] recollirJugada() {
         System.out.println("Indica tu jugada (fila i columna)");
         short fila = sc.nextShort();
         short columna = sc.nextShort();
@@ -39,13 +39,13 @@ public class TUI {
     }
 
 
-    public static void finDePartida(char guanyador){
+    public void finDePartida(char guanyador){
 
         if (guanyador == 'X'){
-            System.out.println("El jugador 2 ha guanyat");
+            System.out.println("El jugador 2 ha guanyat\n");
             control = true;
         } else if (guanyador == 'O'){
-            System.out.println("El jugador 1 ha guanyat");
+            System.out.println("El jugador 1 ha guanyat\n");
             control = true;
         } else
             System.out.println("Empat");

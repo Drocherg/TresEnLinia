@@ -44,7 +44,9 @@ public class Main {
         if (joc.empat() == false){
             tui.finDePartida(guanyador);
         }
-
+        if (joc.jugadaGuanyadora() || joc.empat()){
+            TUI.mostrarMenu();
+        }
 
     }
 
