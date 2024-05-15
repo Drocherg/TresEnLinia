@@ -1,9 +1,10 @@
+import java.io.IOException;
 
 public class Main {
     TUI tui = new TUI();
     Joc joc = new Joc();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Main main = new Main();
 
         int opcioEscollida = TUI.mostrarMenu();
@@ -53,7 +54,7 @@ public class Main {
     private void carregarPartida() {
 
     }
-    private void configuracio() {
+    private void configuracio() throws IOException {
         tui.selConfiguracio();
     }
     private void sortir() {

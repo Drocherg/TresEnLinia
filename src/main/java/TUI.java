@@ -31,21 +31,26 @@ public class TUI {
         }
         return taulell;
     }
-    public short[] recollirJugada() {
-        System.out.println("Indica tu jugada (fila i columna)");
+    public static short[] recollirJugada() {
         short fila = sc.nextShort();
         short columna = sc.nextShort();
+        short tfila = 3;
+        short tcolumna = 3; //mas adelante podremos cambiarlo con el archivo de configuracion
+        if (fila > 2 || columna > 2){
+            System.out.println("La jugada seleccionada se sale del tablero");
+            recollirJugada();
+        }
         return new short[]{fila, columna};
     }
 
 
-    public void finDePartida(char guanyador){
+    public static void finDePartida(char guanyador){
 
         if (guanyador == 'X'){
-            System.out.println("El jugador 2 ha guanyat\n");
+            System.out.println("El jugador 2 ha guanyat");
             control = true;
         } else if (guanyador == 'O'){
-            System.out.println("El jugador 1 ha guanyat\n");
+            System.out.println("El jugador 1 ha guanyat");
             control = true;
         } else
             System.out.println("Empat");
