@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class TUI {
@@ -6,19 +9,33 @@ public class TUI {
     int torn = 0;
 
     private static Scanner sc = new Scanner(System.in);
-    public static int mostrarMenu() {
+    public static short mostrarMenu() {
         System.out.println("Escull una opció");
         System.out.println();
         System.out.println("1. Nova partida");
         System.out.println("2. Carregar partida");
         System.out.println("3. Configuració");
         System.out.println("4. Sortir");
-        int opcioEscollida = sc.nextInt();
+        short opcioEscollida = sc.nextShort();
         sc.nextLine();
 
         return opcioEscollida;
 
     }
+
+    public void taulellConfigurat() throws IOException {
+        File nouTaulell = new File("nouTaulell.txt");
+        FileWriter actualitzatTaulell = new FileWriter("nouTaulell.txt");
+
+        if (nouTaulell.createNewFile()){
+            System.out.println("Archiu " + nouTaulell.getName() + " creat");
+        } else
+            actualitzatTaulell.write(selConfiguracio());
+            actualitzatTaulell.close();
+
+        System.out.println("Archiu " + nouTaulell.getName() + " actualitzat");
+    }
+
     public char[][] mostrarTaulell(char[][] taulell) {
         System.out.println("-------------");
         for (int fila = 0; fila < taulell.length; fila++) {
@@ -47,10 +64,10 @@ public class TUI {
     public static void finDePartida(char guanyador){
 
         if (guanyador == 'X'){
-            System.out.println("El jugador 2 ha guanyat");
+            System.out.println("El jugador 2 ha guanyat;");
             control = true;
         } else if (guanyador == 'O'){
-            System.out.println("El jugador 1 ha guanyat");
+            System.out.println("El jugador 1 ha guanyat;");
             control = true;
         } else
             System.out.println("Empat");
@@ -64,7 +81,7 @@ public class TUI {
         System.out.println("Tirando de cable...");
     }
 
-    public void selConfiguracio(){
+    public short selConfiguracio(){
         System.out.println("Has seleccionat configuració");
         System.out.println();
         System.out.println("1. Mida del taulell");
@@ -73,15 +90,21 @@ public class TUI {
 
         if (opcioEscollidaC == 1){
             System.out.println("Escull la nova mida del taulell");
-            int novaMidaX = sc.nextInt();
-            int novaMidaY = sc.nextInt();
+            short novaMida = sc.nextShort();
+
+            if (novaMida > 10 || novaMida < 3){
+                System.out.println("Error en la configuracio");
+            } else
+                return novaMida;
 
         } else if (opcioEscollidaC == 2) {
             System.out.println("Sortint");
             mostrarMenu();
 
         } else
-            selConfiguracio();
+            return selConfiguracio();
+
+        return opcioEscollidaC;
     }
 
 }
