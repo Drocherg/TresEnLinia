@@ -13,8 +13,8 @@ public class Joc {
 
     public void novaPartida() {
         this.taulell = new char[3][3];
-        for (int fila = 0; fila < 3; fila++) {
-            for (int columna = 0; columna < 3; columna++) {
+        for (short fila = 0; fila < 3; fila++) {
+            for (short columna = 0; columna < 3; columna++) {
                 taulell[fila][columna] = ' '; // Asignar espacios en blanco a cada celda del tablero
             }
         }
@@ -36,7 +36,7 @@ public class Joc {
     }
     public boolean jugadaGuanyadora() {
         // Tres en raya en las filas y columnas
-        for (int i = 0; i < 3; i++) {
+        for (short i = 0; i < 3; i++) {
             if (taulell[i][0] != ' ' && taulell[i][0] == taulell[i][1] && taulell[i][1] == taulell[i][2]) {
                 return true; // Tres en raya en la fila i
             }
@@ -56,8 +56,8 @@ public class Joc {
         return false; // No se encontró un tres en raya
     }
     public boolean empat() {
-        for (int fila = 0; fila < 3; fila++) {
-            for (int columna = 0; columna < 3; columna++) {
+        for (short fila = 0; fila < 3; fila++) {
+            for (short columna = 0; columna < 3; columna++) {
                 if (taulell[fila][columna] == ' ') {
                     return false; // Si alguna casilla está vacía, no es empate
                 }

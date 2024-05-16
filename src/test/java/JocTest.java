@@ -2,7 +2,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 class JocTest {
     @org.junit.jupiter.api.Test
@@ -11,8 +14,8 @@ class JocTest {
 
         //crea un tablero vacio
         char[][] t_vacio = new char[3][3];
-        for (int fila = 0; fila < 3; fila++) {
-            for (int columna = 0; columna < 3; columna++) {
+        for (short fila = 0; fila < 3; fila++) {
+            for (short columna = 0; columna < 3; columna++) {
                 t_vacio[fila][columna] = ' '; // Asignar espacios en blanco a cada celda del tablero
             }
         }
@@ -71,15 +74,13 @@ class JocTest {
         }
 
     }
+
     @org.junit.jupiter.api.Test
     void empat() throws IOException {
         TUI tui = new TUI();
         Joc joc = new Joc();
         tui.selNovaPartida();
         joc.novaPartida();
-
-        int board_row = joc.getTaulell().length;
-        int board_column = joc.getTaulell()[0].length;
 
         //Hace un tablero para que gane el jugador 1
         joc.jugar((short) 0, (short) 1);
@@ -92,6 +93,37 @@ class JocTest {
         joc.jugar((short) 2, (short) 1);
         joc.jugar((short) 2, (short) 2);
 
+
         Assertions.assertTrue(joc.empat());
     }
+    /*@ParameterizedTest
+    @CsvSource({"-1,-1"})
+    void gravarPartidaOpcio(short fila,short columna) throws IOException {
+        Joc joc = new Joc();
+        TUI tui = new TUI();
+        short tablero[]{fila, columna};
+        File archivo = new File("savedgames");
+
+        archivo.delete();
+        joc.novaPartida();
+
+        tui.recollirJugada();
+        joc.gravarPartida();
+
+        Assertions.assertTrue(archivo.exists());
+        Assertions.assertEquals("savedgames", archivo.getName());
+    }*/
+
+    /*@org.junit.jupiter.api.Test
+    void gravarPartida() throws IOException {
+        Joc joc = new Joc();
+        File archivo = new File("savedgames");
+
+        archivo.delete();
+        joc.novaPartida();
+        joc.gravarPartida();
+
+        Assertions.assertTrue(archivo.exists());
+        Assertions.assertEquals("savedgames", archivo.getName());
+    }*/
 }
