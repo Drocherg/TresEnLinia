@@ -7,6 +7,7 @@ public class TUI {
 
     static boolean control = false;
     int torn = 0;
+    short opcioEscollidaC;
 
     private static Scanner sc = new Scanner(System.in);
     public static short mostrarMenu() {
@@ -28,12 +29,12 @@ public class TUI {
         FileWriter actualitzatTaulell = new FileWriter("nouTaulell.txt");
 
         if (nouTaulell.createNewFile()){
-            System.out.println("Archiu " + nouTaulell.getName() + " creat");
+            System.out.println("Configuracio creada");
         } else
             actualitzatTaulell.write(selConfiguracio());
             actualitzatTaulell.close();
 
-        System.out.println("Archiu " + nouTaulell.getName() + " actualitzat");
+        System.out.println("Configuracio actualitzat");
     }
 
     public char[][] mostrarTaulell(char[][] taulell) {
@@ -83,12 +84,12 @@ public class TUI {
         System.out.println("Tirando de cable...");
     }
 
-    public short selConfiguracio(){
+    public short selConfiguracio() throws IOException {
         System.out.println("Has seleccionat configuració");
         System.out.println();
         System.out.println("1. Mida del taulell");
         System.out.println("2. Sortir");
-        short opcioEscollidaC = sc.nextShort();
+        opcioEscollidaC = sc.nextShort();
 
         if (opcioEscollidaC == 1){
             System.out.println("Escull la nova mida del taulell");
@@ -97,7 +98,7 @@ public class TUI {
             if (novaMida > 10 || novaMida < 3){
                 System.out.println("Error en la configuracio");
             } else
-                return novaMida;
+                taulellConfigurat();
 
         } else if (opcioEscollidaC == 2) {
             System.out.println("Sortint");
