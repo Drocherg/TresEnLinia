@@ -31,7 +31,7 @@ public class TUI {
         if (nouTaulell.createNewFile()){
             System.out.println("Configuracio creada");
         } else
-            actualitzatTaulell.write(selConfiguracio());
+            actualitzatTaulell.write(opcioEscollidaC);
             actualitzatTaulell.close();
 
         System.out.println("Configuracio actualitzat");
