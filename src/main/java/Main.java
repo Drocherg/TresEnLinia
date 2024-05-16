@@ -24,7 +24,7 @@ public class Main {
         }
 
     }
-    private void novaPartida() {
+    private void novaPartida() throws IOException {
         tui.selNovaPartida();
         joc.novaPartida();
         tui.mostrarTaulell(joc.getTaulell());
@@ -46,7 +46,21 @@ public class Main {
             tui.finDePartida(guanyador);
         }
         if (joc.jugadaGuanyadora() || joc.empat()){
-            TUI.mostrarMenu();
+            short opcioEscollida = TUI.mostrarMenu();
+            switch (opcioEscollida) {
+                case 1:
+                    novaPartida();
+                    break;
+                case 2:
+                    carregarPartida();
+                    break;
+                case 3:
+                    configuracio();
+                    break;
+                case 4:
+                    sortir();
+                    break;
+            }
         }
 
     }
