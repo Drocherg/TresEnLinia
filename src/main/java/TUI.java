@@ -105,7 +105,7 @@ public class TUI {
 
         } else if (opcioEscollidaC == 2) {
             System.out.println("Sortint");
-
+            mostrarMenu();
         } else
             selConfiguracio();
     }
