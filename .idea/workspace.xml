@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Pruebas para comprobar jugadas añadidas (falta cambiar las del jugador 2)">
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Cambios y arreglos varios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JocTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JocTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TUI.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Drocherg/TresEnLinia.git&quot;,
-    &quot;accountId&quot;: &quot;b7aff0c5-06b8-4b5c-90a3-358cd2deb977&quot;
+    &quot;accountId&quot;: &quot;9564c07f-af07-4ccd-b470-fcef7d49f218&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -46,37 +46,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.JocTest.empat.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.gjugador1Condicion1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.gjugador1Condicion3.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.gjugador1Condicion4.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.gjugador1Condicion6.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.gjugador1Condicion8.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.jugada_jugador1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.jugada_jugador2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.mostrarMenu.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.novaPartida.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.primerturno.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.taulellConfigurat (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.taulellConfigurat.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.testCrearArchivoConFormatoFecha.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JocTest.testCrearDirectorio.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.TresEnLinia [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.JocTest.empat.executor": "Run",
+    "JUnit.JocTest.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion1.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion3.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion4.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion6.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion8.executor": "Run",
+    "JUnit.JocTest.jugada_jugador1.executor": "Run",
+    "JUnit.JocTest.jugada_jugador2.executor": "Run",
+    "JUnit.JocTest.mostrarMenu.executor": "Run",
+    "JUnit.JocTest.novaPartida.executor": "Run",
+    "JUnit.JocTest.primerturno.executor": "Run",
+    "JUnit.JocTest.taulellConfigurat (1).executor": "Run",
+    "JUnit.JocTest.taulellConfigurat.executor": "Run",
+    "JUnit.JocTest.testCrearArchivoConFormatoFecha.executor": "Run",
+    "JUnit.JocTest.testCrearDirectorio.executor": "Run",
+    "Maven.TresEnLinia [compile].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -367,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715865135006</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Cambios y arreglos varios">
+      <option name="closed" value="true" />
+      <created>1715874856071</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1715874856071</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -406,7 +414,8 @@
     <MESSAGE value="Metodo configuracio abanzado" />
     <MESSAGE value="Guardar configuracion arreglado" />
     <MESSAGE value="Pruebas para comprobar jugadas añadidas (falta cambiar las del jugador 2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pruebas para comprobar jugadas añadidas (falta cambiar las del jugador 2)" />
+    <MESSAGE value="Cambios y arreglos varios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios y arreglos varios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
