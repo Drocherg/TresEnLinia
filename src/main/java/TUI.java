@@ -24,7 +24,7 @@ public class TUI {
 
     }
 
-    public void taulellConfigurat() throws IOException {
+    public void taulellConfigurat(short novaMida) throws IOException {
         File nouTaulell = new File("nouTaulell.txt");
         FileWriter actualitzatTaulell = new FileWriter("nouTaulell.txt");
 
@@ -99,7 +99,7 @@ public class TUI {
                 System.out.println("Error en la configuracio");
                 selConfiguracio();
             } else
-                taulellConfigurat();
+                taulellConfigurat(novaMida);
 
         } else if (opcioEscollidaC == 2) {
             System.out.println("Sortint");

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Metodo configuracio abanzado">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2024_11_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2024_11_59__Changes_.xml" afterDir="false" />
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Guardar configuracion arreglado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Joc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Joc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/JocTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JocTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Joc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Joc.class" afterDir="false" />
@@ -58,11 +55,20 @@
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.JocTest.empat.executor": "Run",
     "JUnit.JocTest.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion1.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion3.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion4.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion6.executor": "Run",
+    "JUnit.JocTest.gjugador1Condicion8.executor": "Run",
     "JUnit.JocTest.jugada_jugador1.executor": "Run",
     "JUnit.JocTest.jugada_jugador2.executor": "Run",
     "JUnit.JocTest.mostrarMenu.executor": "Run",
     "JUnit.JocTest.novaPartida.executor": "Run",
     "JUnit.JocTest.primerturno.executor": "Run",
+    "JUnit.JocTest.taulellConfigurat (1).executor": "Run",
+    "JUnit.JocTest.taulellConfigurat.executor": "Run",
+    "JUnit.JocTest.testCrearArchivoConFormatoFecha.executor": "Run",
+    "JUnit.JocTest.testCrearDirectorio.executor": "Run",
     "Maven.TresEnLinia [compile].executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -74,48 +80,52 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="TresEnLinia" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JocTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.JocTest.gjugador1Condicion8">
+    <configuration name="JocTest.gjugador1Condicion1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TresEnLinia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JocTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JocTest.empat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TresEnLinia" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JocTest" />
-      <option name="METHOD_NAME" value="empat" />
+      <option name="METHOD_NAME" value="gjugador1Condicion1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JocTest.mostrarMenu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JocTest.gjugador1Condicion3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TresEnLinia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JocTest" />
-      <option name="METHOD_NAME" value="mostrarMenu" />
+      <option name="METHOD_NAME" value="gjugador1Condicion3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JocTest.novaPartida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JocTest.gjugador1Condicion4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TresEnLinia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JocTest" />
-      <option name="METHOD_NAME" value="novaPartida" />
+      <option name="METHOD_NAME" value="gjugador1Condicion4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JocTest.gjugador1Condicion6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TresEnLinia" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JocTest" />
+      <option name="METHOD_NAME" value="gjugador1Condicion6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JocTest.gjugador1Condicion8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TresEnLinia" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JocTest" />
+      <option name="METHOD_NAME" value="gjugador1Condicion8" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.JocTest.empat" />
-        <item itemvalue="JUnit.JocTest" />
-        <item itemvalue="JUnit.JocTest.mostrarMenu" />
-        <item itemvalue="JUnit.JocTest.novaPartida" />
+        <item itemvalue="JUnit.JocTest.gjugador1Condicion8" />
+        <item itemvalue="JUnit.JocTest.gjugador1Condicion6" />
+        <item itemvalue="JUnit.JocTest.gjugador1Condicion3" />
+        <item itemvalue="JUnit.JocTest.gjugador1Condicion1" />
+        <item itemvalue="JUnit.JocTest.gjugador1Condicion4" />
       </list>
     </recent_temporary>
   </component>
@@ -347,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715857415732</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Guardar configuracion arreglado">
+      <option name="closed" value="true" />
+      <created>1715859008401</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1715859008401</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,7 +402,8 @@
     <MESSAGE value="Configuracion con cambio de tablero casi acabado" />
     <MESSAGE value="Prueba de empate añadida" />
     <MESSAGE value="Metodo configuracio abanzado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metodo configuracio abanzado" />
+    <MESSAGE value="Guardar configuracion arreglado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Guardar configuracion arreglado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

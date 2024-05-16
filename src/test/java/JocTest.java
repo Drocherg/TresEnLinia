@@ -6,6 +6,9 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
 
 class JocTest {
     @org.junit.jupiter.api.Test
@@ -82,38 +85,458 @@ class JocTest {
         tui.selNovaPartida();
         joc.novaPartida();
 
-        //Hace un tablero para que gane el jugador 1
-        joc.jugar((short) 0, (short) 1);
-        joc.jugar((short) 0, (short) 0);
-        joc.jugar((short) 1, (short) 0);
-        joc.jugar((short) 0, (short) 2);
-        joc.jugar((short) 1, (short) 1);
-        joc.jugar((short) 1, (short) 2);
-        joc.jugar((short) 2, (short) 0);
-        joc.jugar((short) 2, (short) 1);
-        joc.jugar((short) 2, (short) 2);
-
+        // Llenar todas las casillas del tablero
+        for (short fila = 0; fila < 3; fila++) {
+            for (short columna = 0; columna < 3; columna++) {
+                joc.jugar(fila, columna);
+            }
+        }
 
         Assertions.assertTrue(joc.empat());
     }
-    /*@ParameterizedTest
-    @CsvSource({"-1,-1"})
-    void gravarPartidaOpcio(short fila,short columna) throws IOException {
-        Joc joc = new Joc();
+    @ParameterizedTest
+    @CsvSource({"3", "4", "5", "6", "7", "8", "9", "10"})
+    void taulellConfigurat(short novaMida) throws IOException {
         TUI tui = new TUI();
-        short tablero[]{fila, columna};
-        File archivo = new File("savedgames");
+        File nouTaulell = new File("nouTaulell.txt");
+        Scanner sc = new Scanner(nouTaulell);
+        // Elimina el archivo si existe previamente
+        if (nouTaulell.exists()) {
+            nouTaulell.delete();
+        }
 
-        archivo.delete();
+        // Llama al método para configurar el archivo
+        tui.taulellConfigurat(novaMida);
+
+        // Comprueba si el archivo se creó correctamente
+        Assertions.assertTrue(nouTaulell.exists());
+
+        // Comprueba si el nombre del archivo es correcto
+        Assertions.assertEquals("nouTaulell.txt", nouTaulell.getName());
+
+        // Comprueba si el archivo contiene el número correspondiente a novaMida
+        Assertions.assertTrue(sc.hasNextLine());
+        short contenido = Short.parseShort(sc.nextLine());
+        sc.close();
+        Assertions.assertEquals(novaMida, contenido);
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador1Condicion1() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
         joc.novaPartida();
 
-        tui.recollirJugada();
-        joc.gravarPartida();
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 0); // Jugador 1
+        joc.jugar((short) 0, (short) 1); // Jugador 2
+        joc.jugar((short) 1, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 1); // Jugador 2
+        joc.jugar((short) 2, (short) 0); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | X | O |   |
+-----------------
+ 1 | X | O |   |
+-----------------
+ 2 | X |   |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador1Condicion2() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
 
-        Assertions.assertTrue(archivo.exists());
-        Assertions.assertEquals("savedgames", archivo.getName());
-    }*/
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 1); // Jugador 1
+        joc.jugar((short) 0, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 1); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 2, (short) 1); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | O | X |   |
+-----------------
+ 1 | O | X |   |
+-----------------
+ 2 |   | X |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador1Condicion3() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
 
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 2); // Jugador 1
+        joc.jugar((short) 0, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 2); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 2, (short) 2); // Jugador 1
+    /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | O |   | X |
+-----------------
+ 1 | O |   | X |
+-----------------
+ 2 |   |   | X |
+-----------------
+    */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador1Condicion4() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 0, (short) 1); // Jugador 1
+        joc.jugar((short) 1, (short) 1); // Jugador 2
+        joc.jugar((short) 0, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | X | X | X |
+-----------------
+ 1 | O | O |   |
+-----------------
+ 2 |   |   |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador1Condicion5() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 1, (short) 0); // Jugador 1
+        joc.jugar((short) 0, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 1); // Jugador 1
+        joc.jugar((short) 0, (short) 1); // Jugador 2
+        joc.jugar((short) 1, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | O | O |   |
+-----------------
+ 1 | X | X | X |
+-----------------
+ 2 |   |   |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador1Condicion6() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 2, (short) 0); // Jugador 1
+        joc.jugar((short) 0, (short) 0); // Jugador 2
+        joc.jugar((short) 2, (short) 1); // Jugador 1
+        joc.jugar((short) 0, (short) 1); // Jugador 2
+        joc.jugar((short) 2, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | O | O |   |
+-----------------
+ 1 |   |   |   |
+-----------------
+ 2 | X | X | X |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador1Condicion7() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 2, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 1); // Jugador 1
+        joc.jugar((short) 1, (short) 2); // Jugador 2
+        joc.jugar((short) 0, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 |   |   | X |
+-----------------
+ 1 | O | X | O |
+-----------------
+ 2 | X |   |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador1Condicion8() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 1); // Jugador 1
+        joc.jugar((short) 1, (short) 2); // Jugador 2
+        joc.jugar((short) 2, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | X |   |   |
+-----------------
+ 1 | O | X | O |
+-----------------
+ 2 |   |   | X |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador2Condicion1() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 0); // Jugador 1
+        joc.jugar((short) 0, (short) 1); // Jugador 2
+        joc.jugar((short) 1, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 1); // Jugador 2
+        joc.jugar((short) 2, (short) 0); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | X | O |   |
+-----------------
+ 1 | X | O |   |
+-----------------
+ 2 | X |   |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador2Condicion2() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 1); // Jugador 1
+        joc.jugar((short) 0, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 1); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 2, (short) 1); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | O | X |   |
+-----------------
+ 1 | O | X |   |
+-----------------
+ 2 |   | X |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador2Condicion3() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 2); // Jugador 1
+        joc.jugar((short) 0, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 2); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 2, (short) 2); // Jugador 1
+    /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | O |   | X |
+-----------------
+ 1 | O |   | X |
+-----------------
+ 2 |   |   | X |
+-----------------
+    */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador2Condicion4() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 0, (short) 1); // Jugador 1
+        joc.jugar((short) 1, (short) 1); // Jugador 2
+        joc.jugar((short) 0, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | X | X | X |
+-----------------
+ 1 | O | O |   |
+-----------------
+ 2 |   |   |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador2Condicion5() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 1, (short) 0); // Jugador 1
+        joc.jugar((short) 0, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 1); // Jugador 1
+        joc.jugar((short) 0, (short) 1); // Jugador 2
+        joc.jugar((short) 1, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | O | O |   |
+-----------------
+ 1 | X | X | X |
+-----------------
+ 2 |   |   |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador2Condicion6() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 2, (short) 0); // Jugador 1
+        joc.jugar((short) 0, (short) 0); // Jugador 2
+        joc.jugar((short) 2, (short) 1); // Jugador 1
+        joc.jugar((short) 0, (short) 1); // Jugador 2
+        joc.jugar((short) 2, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | O | O |   |
+-----------------
+ 1 |   |   |   |
+-----------------
+ 2 | X | X | X |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador2Condicion7() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 2, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 1); // Jugador 1
+        joc.jugar((short) 1, (short) 2); // Jugador 2
+        joc.jugar((short) 0, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 |   |   | X |
+-----------------
+ 1 | O | X | O |
+-----------------
+ 2 | X |   |   |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+    @org.junit.jupiter.api.Test
+    void gjugador2Condicion8() throws IOException {
+        TUI tui = new TUI();
+        Joc joc = new Joc();
+        tui.selNovaPartida();
+        joc.novaPartida();
+
+        // Hacer movimientos para que el jugador 1 gane
+        joc.jugar((short) 0, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+        joc.jugar((short) 1, (short) 1); // Jugador 1
+        joc.jugar((short) 1, (short) 2); // Jugador 2
+        joc.jugar((short) 2, (short) 2); // Jugador 1
+        /*
+   | 0 | 1 | 2 |
+-----------------
+ 0 | X |   |   |
+-----------------
+ 1 | O | X | O |
+-----------------
+ 2 |   |   | X |
+-----------------
+        */
+        // Verificar que el jugador 1 gana
+        Assertions.assertTrue(joc.jugadaGuanyadora());
+    }
+}
     /*@org.junit.jupiter.api.Test
     void gravarPartida() throws IOException {
         Joc joc = new Joc();
@@ -126,4 +549,33 @@ class JocTest {
         Assertions.assertTrue(archivo.exists());
         Assertions.assertEquals("savedgames", archivo.getName());
     }*/
-}
+    /*@org.junit.jupiter.api.Test
+    void testCrearDirectorio() {
+        TUI tui = new TUI();
+        File directorio = new File("savedgames");
+
+        boolean creado = directorio.mkdir();
+
+        Assertions.assertTrue(creado);
+        Assertions.assertTrue(directorio.exists());
+        Assertions.assertTrue(directorio.isDirectory());
+        Assertions.assertEquals("savedgames", directorio.getName());
+    }*/
+    /*@org.junit.jupiter.api.Test
+    void testCrearArchivoConFormatoFecha() {
+        TUI tui = new TUI();
+        File directorio = new File("savedgames");
+        directorio.mkdir();
+
+        Date fechaActual = new Date();
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyyMMdd_HHmmss");
+        String nombreArchivo = formatoFecha.format(fechaActual);
+        File archivo = new File("savedgames/" + nombreArchivo);
+
+        boolean creado = false;
+
+        Assertions.assertTrue(creado);
+        Assertions.assertTrue(archivo.exists());
+        Assertions.assertFalse(archivo.isDirectory());
+        Assertions.assertEquals(nombreArchivo, archivo.getName());
+    }*/
