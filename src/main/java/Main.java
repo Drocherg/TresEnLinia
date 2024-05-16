@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Main main = new Main();
 
-        int opcioEscollida = TUI.mostrarMenu();
+        short opcioEscollida = TUI.mostrarMenu();
         switch (opcioEscollida) {
             case 1:
                 main.novaPartida();

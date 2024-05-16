@@ -8,7 +8,7 @@ public class TUI {
     static boolean control = false;
     int torn = 0;
     short opcioEscollidaC;
-
+    short novaMida;
     private static Scanner sc = new Scanner(System.in);
     public static short mostrarMenu() {
         System.out.println("Escull una opció");
@@ -31,7 +31,7 @@ public class TUI {
         if (nouTaulell.createNewFile()){
             System.out.println("Configuracio creada");
         } else
-            actualitzatTaulell.write(opcioEscollidaC);
+            actualitzatTaulell.write(String.valueOf(novaMida));
             actualitzatTaulell.close();
 
         System.out.println("Configuracio actualitzat");
@@ -93,10 +93,11 @@ public class TUI {
 
         if (opcioEscollidaC == 1){
             System.out.println("Escull la nova mida del taulell");
-            short novaMida = sc.nextShort();
+            novaMida = sc.nextShort();
 
             if (novaMida > 10 || novaMida < 3){
                 System.out.println("Error en la configuracio");
+                selConfiguracio();
             } else
                 taulellConfigurat();
 
