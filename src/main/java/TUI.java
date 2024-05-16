@@ -73,7 +73,9 @@ public class TUI {
             System.out.println("Empat");
         control = true;
     }
-
+    public void tEmpat(){
+        System.out.println("No queden caselles buides, queda en empat!");
+    }
     public void selNovaPartida(){
         System.out.println("Has seleccionat nova partida");
     }

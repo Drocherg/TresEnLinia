@@ -71,12 +71,11 @@ class JocTest {
         }
 
     }
-}
-    /*@org.junit.jupiter.api.Test
+    @org.junit.jupiter.api.Test
     void empat() throws IOException {
         TUI tui = new TUI();
         Joc joc = new Joc();
-        joc.tui.taulellConfigurat((short) 3);
+        tui.selNovaPartida();
         joc.novaPartida();
 
         int board_row = joc.getTaulell().length;
@@ -95,4 +94,4 @@ class JocTest {
 
         Assertions.assertTrue(joc.empat());
     }
-}*/
+}

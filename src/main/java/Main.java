@@ -1,3 +1,5 @@
+/*import java.io.IOException;*/
+
 import java.io.IOException;
 
 public class Main {
@@ -36,7 +38,7 @@ public class Main {
             if (joc.jugadaGuanyadora()) {
                 break; // Salir del bucle si hay una jugada ganadora
             }else if (joc.empat()){
-                joc.tEmpat();
+                tui.tEmpat();
                 break;
             }
         }

@@ -65,9 +65,7 @@ public class Joc {
         }
         return true; // Si todas las casillas están llenas, es empate
     }
-    public void tEmpat(){
-        System.out.println("No hi han mes caselles lliures, queda en empat!");
-    }
+
 }
 
     //| |X| |
