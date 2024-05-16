@@ -35,6 +35,7 @@ public class TUI {
             actualitzatTaulell.close();
 
         System.out.println("Configuracio actualitzat");
+        selConfiguracio();
     }
 
     public char[][] mostrarTaulell(char[][] taulell) {
@@ -84,7 +85,7 @@ public class TUI {
         System.out.println("Tirando de cable...");
     }
 
-    public short selConfiguracio() throws IOException {
+    public void selConfiguracio() throws IOException {
         System.out.println("Has seleccionat configuració");
         System.out.println();
         System.out.println("1. Mida del taulell");
@@ -106,9 +107,7 @@ public class TUI {
             mostrarMenu();
 
         } else
-            return selConfiguracio();
-
-        return opcioEscollidaC;
+            selConfiguracio();
     }
 
 }
