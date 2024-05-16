@@ -51,6 +51,7 @@ public class TUI {
         return taulell;
     }
     public static short[] recollirJugada() {
+        System.out.println("Haz tu jugada (fila y columna)");
         short fila = sc.nextShort();
         short columna = sc.nextShort();
         short tfila = 3;
@@ -104,7 +105,7 @@ public class TUI {
 
         } else if (opcioEscollidaC == 2) {
             System.out.println("Sortint");
-            mostrarMenu();
+
 
         } else
             selConfiguracio();

@@ -7,23 +7,29 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Main main = new Main();
 
+        main.selMenu();
+
+    }
+
+    public void selMenu() throws IOException {
+
         short opcioEscollida = TUI.mostrarMenu();
         switch (opcioEscollida) {
             case 1:
-                main.novaPartida();
+                novaPartida();
                 break;
             case 2:
-                main.carregarPartida();
+                carregarPartida();
                 break;
             case 3:
-                main.configuracio();
+                configuracio();
                 break;
             case 4:
-                main.sortir();
+                sortir();
                 break;
         }
-
     }
+
     private void novaPartida() throws IOException {
         tui.selNovaPartida();
         joc.novaPartida();
@@ -47,20 +53,7 @@ public class Main {
         }
         if (joc.jugadaGuanyadora() || joc.empat()){
             short opcioEscollida = TUI.mostrarMenu();
-            switch (opcioEscollida) {
-                case 1:
-                    novaPartida();
-                    break;
-                case 2:
-                    carregarPartida();
-                    break;
-                case 3:
-                    configuracio();
-                    break;
-                case 4:
-                    sortir();
-                    break;
-            }
+            selMenu();
         }
 
     }
