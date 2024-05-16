@@ -46,38 +46,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.JocTest.empat.executor": "Run",
-    "JUnit.JocTest.executor": "Run",
-    "JUnit.JocTest.gjugador1Condicion1.executor": "Run",
-    "JUnit.JocTest.gjugador1Condicion3.executor": "Run",
-    "JUnit.JocTest.gjugador1Condicion4.executor": "Run",
-    "JUnit.JocTest.gjugador1Condicion6.executor": "Run",
-    "JUnit.JocTest.gjugador1Condicion8.executor": "Run",
-    "JUnit.JocTest.jugada_jugador1.executor": "Run",
-    "JUnit.JocTest.jugada_jugador2.executor": "Run",
-    "JUnit.JocTest.mostrarMenu.executor": "Run",
-    "JUnit.JocTest.novaPartida.executor": "Run",
-    "JUnit.JocTest.primerturno.executor": "Run",
-    "JUnit.JocTest.taulellConfigurat (1).executor": "Run",
-    "JUnit.JocTest.taulellConfigurat.executor": "Run",
-    "JUnit.JocTest.testCrearArchivoConFormatoFecha.executor": "Run",
-    "JUnit.JocTest.testCrearDirectorio.executor": "Run",
-    "Maven.TresEnLinia [compile].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.JocTest.empat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.gjugador1Condicion1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.gjugador1Condicion3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.gjugador1Condicion4.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.gjugador1Condicion6.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.gjugador1Condicion8.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.jugada_jugador1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.jugada_jugador2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.mostrarMenu.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.novaPartida.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.primerturno.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.taulellConfigurat (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.taulellConfigurat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.testCrearArchivoConFormatoFecha.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JocTest.testCrearDirectorio.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TresEnLinia [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Main">
+}</component>
+  <component name="RunManager" selected="JUnit.JocTest.gravarPartida">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TresEnLinia" />
@@ -94,21 +94,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JocTest.gjugador1Condicion6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TresEnLinia" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JocTest" />
-      <option name="METHOD_NAME" value="gjugador1Condicion6" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="JocTest.gjugador1Condicion8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TresEnLinia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JocTest" />
       <option name="METHOD_NAME" value="gjugador1Condicion8" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JocTest.gravarPartida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TresEnLinia" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JocTest" />
+      <option name="METHOD_NAME" value="gravarPartida" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JocTest.gravarPartida" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.JocTest" />
         <item itemvalue="JUnit.JocTest.taulellConfigurat" />
         <item itemvalue="JUnit.JocTest.gjugador1Condicion8" />
-        <item itemvalue="JUnit.JocTest.gjugador1Condicion6" />
       </list>
     </recent_temporary>
   </component>

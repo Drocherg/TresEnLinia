@@ -95,6 +95,7 @@ class JocTest {
 
         Assertions.assertTrue(joc.empat());
     }
+
     @ParameterizedTest
     @CsvSource({"3", "4", "5", "6", "7", "8", "9", "10"})
     void taulellConfigurat(short novaMida) throws IOException {
@@ -124,6 +125,7 @@ class JocTest {
         sc.close();
         Assertions.assertEquals(novaMida, contenido);
     }
+
     @org.junit.jupiter.api.Test
     void gjugador1Condicion1() throws IOException {
         TUI tui = new TUI();
@@ -150,6 +152,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador1Condicion2() throws IOException {
         TUI tui = new TUI();
@@ -176,6 +179,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador1Condicion3() throws IOException {
         TUI tui = new TUI();
@@ -202,6 +206,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador1Condicion4() throws IOException {
         TUI tui = new TUI();
@@ -228,6 +233,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador1Condicion5() throws IOException {
         TUI tui = new TUI();
@@ -254,6 +260,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador1Condicion6() throws IOException {
         TUI tui = new TUI();
@@ -280,6 +287,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador1Condicion7() throws IOException {
         TUI tui = new TUI();
@@ -306,6 +314,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador1Condicion8() throws IOException {
         TUI tui = new TUI();
@@ -332,6 +341,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador2Condicion1() throws IOException {
         TUI tui = new TUI();
@@ -358,6 +368,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador2Condicion2() throws IOException {
         TUI tui = new TUI();
@@ -384,6 +395,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador2Condicion3() throws IOException {
         TUI tui = new TUI();
@@ -410,6 +422,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador2Condicion4() throws IOException {
         TUI tui = new TUI();
@@ -436,6 +449,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador2Condicion5() throws IOException {
         TUI tui = new TUI();
@@ -462,6 +476,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador2Condicion6() throws IOException {
         TUI tui = new TUI();
@@ -488,6 +503,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador2Condicion7() throws IOException {
         TUI tui = new TUI();
@@ -514,6 +530,7 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
+
     @org.junit.jupiter.api.Test
     void gjugador2Condicion8() throws IOException {
         TUI tui = new TUI();
@@ -540,20 +557,26 @@ class JocTest {
         // Verificar que el jugador 1 gana
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
-}
-    /*@org.junit.jupiter.api.Test
+
+    @org.junit.jupiter.api.Test
     void gravarPartida() throws IOException {
         Joc joc = new Joc();
+        TUI tui = new TUI();
         File archivo = new File("savedgames");
 
-        archivo.delete();
-        joc.novaPartida();
-        joc.gravarPartida();
 
+        joc.novaPartida();
+
+
+        joc.jugar((short) 0, (short) 0); // Jugador 1
+        joc.jugar((short) 1, (short) 0); // Jugador 2
+
+        tui.gravarPartida();
         Assertions.assertTrue(archivo.exists());
         Assertions.assertEquals("savedgames", archivo.getName());
-    }*/
-    /*@org.junit.jupiter.api.Test
+    }
+
+    @org.junit.jupiter.api.Test
     void testCrearDirectorio() {
         TUI tui = new TUI();
         File directorio = new File("savedgames");
@@ -564,7 +587,8 @@ class JocTest {
         Assertions.assertTrue(directorio.exists());
         Assertions.assertTrue(directorio.isDirectory());
         Assertions.assertEquals("savedgames", directorio.getName());
-    }*/
+    }
+}
     /*@org.junit.jupiter.api.Test
     void testCrearArchivoConFormatoFecha() {
         TUI tui = new TUI();
