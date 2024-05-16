@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Se puede quedar en empate">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Joc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Joc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JocTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JocTest.java" afterDir="false" />
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Prueba de empate añadida">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +54,7 @@
     "JUnit.JocTest.mostrarMenu.executor": "Run",
     "JUnit.JocTest.novaPartida.executor": "Run",
     "JUnit.JocTest.primerturno.executor": "Run",
+    "Maven.TresEnLinia [compile].executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -326,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715793816505</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Prueba de empate añadida">
+      <option name="closed" value="true" />
+      <created>1715854296264</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1715854296264</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -361,7 +365,8 @@
     <MESSAGE value="finDePartida hecho y configuracion a medias" />
     <MESSAGE value="JocTest Prueba jugada 2 añadida" />
     <MESSAGE value="Configuracion con cambio de tablero casi acabado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configuracion con cambio de tablero casi acabado" />
+    <MESSAGE value="Prueba de empate añadida" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prueba de empate añadida" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
