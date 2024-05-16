@@ -52,7 +52,6 @@ public class Main {
             tui.finDePartida(guanyador);
         }
         if (joc.jugadaGuanyadora() || joc.empat()){
-            short opcioEscollida = TUI.mostrarMenu();
             selMenu();
         }
 
