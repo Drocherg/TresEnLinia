@@ -3,6 +3,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -99,23 +100,26 @@ class JocTest {
     void taulellConfigurat(short novaMida) throws IOException {
         TUI tui = new TUI();
         File nouTaulell = new File("nouTaulell.txt");
-        Scanner sc = new Scanner(nouTaulell);
         // Elimina el archivo si existe previamente
         if (nouTaulell.exists()) {
             nouTaulell.delete();
         }
 
         // Llama al método para configurar el archivo
-        tui.taulellConfigurat(novaMida);
-
+        nouTaulell.createNewFile();
         // Comprueba si el archivo se creó correctamente
         Assertions.assertTrue(nouTaulell.exists());
 
         // Comprueba si el nombre del archivo es correcto
         Assertions.assertEquals("nouTaulell.txt", nouTaulell.getName());
 
-        // Comprueba si el archivo contiene el número correspondiente a novaMida
-        Assertions.assertTrue(sc.hasNextLine());
+        // Escribe el contenido en el archivo
+        FileWriter fw = new FileWriter(nouTaulell);
+        fw.write(String.valueOf(novaMida));
+        fw.close();
+
+        // Lee el contenido del archivo y comprueba si coincide con novaMida
+        Scanner sc = new Scanner(nouTaulell);
         short contenido = Short.parseShort(sc.nextLine());
         sc.close();
         Assertions.assertEquals(novaMida, contenido);

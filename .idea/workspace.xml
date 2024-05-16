@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Guardar configuracion arreglado">
+    <list default="true" id="da2bbdbf-fbb1-40db-af1b-c7e488c172b2" name="Changes" comment="Pruebas para comprobar jugadas añadidas (falta cambiar las del jugador 2)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/JocTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JocTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Joc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Joc.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/JocTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/TUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TUI.class" afterDir="false" />
@@ -80,13 +78,12 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.JocTest.gjugador1Condicion8">
-    <configuration name="JocTest.gjugador1Condicion1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.JocTest.taulellConfigurat">
+    <configuration name="JocTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TresEnLinia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JocTest" />
-      <option name="METHOD_NAME" value="gjugador1Condicion1" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,16 +93,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JocTest" />
       <option name="METHOD_NAME" value="gjugador1Condicion3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JocTest.gjugador1Condicion4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TresEnLinia" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JocTest" />
-      <option name="METHOD_NAME" value="gjugador1Condicion4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,13 +118,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JocTest.taulellConfigurat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TresEnLinia" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JocTest" />
+      <option name="METHOD_NAME" value="taulellConfigurat(short)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JocTest.taulellConfigurat" />
+        <item itemvalue="JUnit.JocTest" />
         <item itemvalue="JUnit.JocTest.gjugador1Condicion8" />
         <item itemvalue="JUnit.JocTest.gjugador1Condicion6" />
         <item itemvalue="JUnit.JocTest.gjugador1Condicion3" />
-        <item itemvalue="JUnit.JocTest.gjugador1Condicion1" />
-        <item itemvalue="JUnit.JocTest.gjugador1Condicion4" />
       </list>
     </recent_temporary>
   </component>
@@ -365,7 +362,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715859008401</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Pruebas para comprobar jugadas añadidas (falta cambiar las del jugador 2)">
+      <option name="closed" value="true" />
+      <created>1715865018201</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1715865018201</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Pruebas para comprobar jugadas añadidas (falta cambiar las del jugador 2)">
+      <option name="closed" value="true" />
+      <created>1715865135006</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1715865135006</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -403,7 +416,8 @@
     <MESSAGE value="Prueba de empate añadida" />
     <MESSAGE value="Metodo configuracio abanzado" />
     <MESSAGE value="Guardar configuracion arreglado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guardar configuracion arreglado" />
+    <MESSAGE value="Pruebas para comprobar jugadas añadidas (falta cambiar las del jugador 2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pruebas para comprobar jugadas añadidas (falta cambiar las del jugador 2)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
