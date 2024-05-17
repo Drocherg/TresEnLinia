@@ -562,25 +562,47 @@ class JocTest {
     void gravarPartida() throws IOException {
         Joc joc = new Joc();
         TUI tui = new TUI();
-        File archivo = new File("savedgames");
-
+        File directorio = new File("savedgames");
 
         joc.novaPartida();
-
 
         joc.jugar((short) 0, (short) 0); // Jugador 1
         joc.jugar((short) 1, (short) 0); // Jugador 2
 
-        tui.gravarPartida();
-        Assertions.assertTrue(archivo.exists());
-        Assertions.assertEquals("savedgames", archivo.getName());
+        // Verificar que el directorio existe
+        Assertions.assertTrue(directorio.exists());
+        // Verificar que el nombre del directorio es correcto
+        Assertions.assertEquals("savedgames", directorio.getName());
+
+        // Guardar la partida si se ingresan coordenadas -1, -1
+        joc.jugar((short) -1, (short) -1);
+
+        // Crear un archivo con el nombre en formato yyyyMMdd_HHmmss dentro del directorio
+        File[] archivos = directorio.listFiles();
+
+        Assertions.assertNotNull(archivos);
+        Assertions.assertNotEquals(0, archivos.length);
+
+        // Verificar que se ha creado un archivo
+        File partidaGuardada = archivos[0];
+
+        Assertions.assertTrue(partidaGuardada.exists());
+
+        // Verificar que el nombre del archivo tiene el formato esperado
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
+        String fechaActual = dateFormat.format(new Date());
+        String nombreEsperado = fechaActual + ".txt";
+
+        Assertions.assertEquals(nombreEsperado, partidaGuardada.getName());
     }
 
     @org.junit.jupiter.api.Test
     void testCrearDirectorio() {
         TUI tui = new TUI();
         File directorio = new File("savedgames");
-
+        if (directorio.exists()){
+            directorio.delete();
+        }
         boolean creado = directorio.mkdir();
 
         Assertions.assertTrue(creado);

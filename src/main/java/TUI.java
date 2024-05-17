@@ -26,22 +26,20 @@ public class TUI {
 
     public void crearDirectorio () throws IOException {
         File directorio = new File("savedgames");
-        if (directorio.exists()){
-            System.out.println("Ja esta creat");
-        }else
+        if (!directorio.exists()){
             directorio.mkdir();
+            System.out.println("Directori 'savedgames' creat");
+        }
     }
 
     public void gravarPartida() throws IOException {
         crearDirectorio();
         File archivo = new File("savedgames");
-        if (archivo.exists()){
-            System.out.println("L'arxiu ja exist");
-        } else
-
+        if (archivo.createNewFile()) {
             System.out.println("Partida gravada");
-
         }
+
+    }
 
 
     public void taulellConfigurat(short novaMida) throws IOException {
@@ -71,27 +69,34 @@ public class TUI {
         return taulell;
     }
     public short[] recollirJugada() throws IOException {
-        System.out.println("Haz tu jugada (fila y columna)");
+        System.out.println("Fes la teva jugada (fila y columna)");
         short fila = sc.nextShort();
         short columna = sc.nextShort();
-        short tfila = 3;
-        short tcolumna = 3; //mas adelante podremos cambiarlo con el archivo de configuracion
-        if (fila == -1 && columna == -1){
-            System.out.println("Vols gravar partida? Si/No");
+
+        if (fila == -1 && columna == -1) {
+            System.out.println("Vols gravar partida i sortir? \n1.- Si \n2.- No");
             short gravar = sc.nextShort();
-            if (gravar == 0){
-                System.out.println("Gravar cancelat");
-                recollirJugada();
-            } else if (gravar == 1) {
+            if (gravar == 1) {
                 gravarPartida();
                 System.out.println("Partida gravada");
-                mostrarMenu();
+                fila = 69;
+                columna = 69;
+                return new short[]{fila, columna};
+            } else {
+                System.out.println("Gravar cancelat");
+                // No necesitamos realizar la comprobación de los valores de fila y columna aquí
+                // Continuamos solicitando la jugada
+                return recollirJugada();
             }
         }
-        if (fila > 2 || columna > 2){
-            System.out.println("La jugada seleccionada se sale del tablero");
-            recollirJugada();
+
+        // Solo realizamos la comprobación de los valores de fila y columna si no se seleccionó la opción de guardar y salir
+        if (fila < 0 || fila >= 3 || columna < 0 || columna >= 3) {
+            System.out.println("La jugada seleccionada està fora del taulell");
+            // Volvemos a solicitar la jugada
+            return recollirJugada();
         }
+
         return new short[]{fila, columna};
     }
 

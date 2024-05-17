@@ -22,6 +22,10 @@ public class Joc {
     }
 
     public char[][] jugar(short fila,short columna) {
+        if (fila == 69 && columna == 69) {
+            // No hacer nada y devolver el tablero tal como está
+            System.exit(0);
+        }
         if (taulell[fila][columna] == ' ') {
             // Determinar el jugador actual en función del turno
             char jugadorActual = (torn % 2 == 1) ? 'X' : 'O';
