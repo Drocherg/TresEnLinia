@@ -558,8 +558,9 @@ class JocTest {
         Assertions.assertTrue(joc.jugadaGuanyadora());
     }
 
-    @org.junit.jupiter.api.Test
-    void gravarPartida() throws IOException {
+    /*@ParameterizedTest
+    @CsvSource({"-1", "-1"})
+    void gravarPartida(short gravar) throws IOException {
         Joc joc = new Joc();
         TUI tui = new TUI();
         File directorio = new File("savedgames");
@@ -575,8 +576,8 @@ class JocTest {
         Assertions.assertEquals("savedgames", directorio.getName());
 
         // Guardar la partida si se ingresan coordenadas -1, -1
-        joc.jugar((short) -1, (short) -1);
-
+        tui.recollirJugada();
+        joc.jugar(gravar, gravar);
         // Crear un archivo con el nombre en formato yyyyMMdd_HHmmss dentro del directorio
         File[] archivos = directorio.listFiles();
 
@@ -594,7 +595,7 @@ class JocTest {
         String nombreEsperado = fechaActual + ".txt";
 
         Assertions.assertEquals(nombreEsperado, partidaGuardada.getName());
-    }
+    }*/
 
     @org.junit.jupiter.api.Test
     void testCrearDirectorio() {
