@@ -1,6 +1,7 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class TUI {
@@ -34,9 +35,13 @@ public class TUI {
 
     public void gravarPartida() throws IOException {
         crearDirectorio();
-        File archivo = new File("savedgames");
-        if (archivo.createNewFile()) {
-            System.out.println("Partida gravada");
+        Date date = new Date();
+        DateFormat hourdateFormat = new SimpleDateFormat("HH.mm.ss dd-MM-yyyy");
+        String historial = hourdateFormat.format(date);
+        try {
+            FileWriter archivo = new FileWriter(historial+".txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
     }
